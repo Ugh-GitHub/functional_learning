@@ -2,12 +2,15 @@ import React from 'react';
 // import logo from '../../logo.svg';
 // import { Counter } from '../counter/Counter';
 import '../App/App.css';
+import { NavLink } from 'react-router-dom';
 
 function Body() {
   return (
     
     <div className="Body">
+        <NavLink to='/cat'>
         <h1>Hello World</h1>
+        </NavLink>
     </div>
     
   );
