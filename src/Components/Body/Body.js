@@ -2,15 +2,19 @@ import React from 'react';
 // import logo from '../../logo.svg';
 // import { Counter } from '../counter/Counter';
 import '../App/App.css';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export default function Body() {
+    let navigate = useNavigate();
+
   return (
     
     <div className="Body">
-        <NavLink to='/cat'>
-        <h1>Hello World</h1>
-        </NavLink>
+        <button onClick={() => {
+            navigate('/cat');
+          }}>
+        Hello World
+        </button>
     </div>
     
   );
