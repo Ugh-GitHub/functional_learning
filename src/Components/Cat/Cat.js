@@ -3,7 +3,7 @@ import React from 'react';
 // import { Counter } from '../counter/Counter';
 import '../App/App.css';
 
-function Cat() {
+export default function Cat() {
   return (
     
     <div className="Body">
@@ -12,5 +12,3 @@ function Cat() {
     
   );
 }
-
-export default Cat;

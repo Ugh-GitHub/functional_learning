@@ -4,7 +4,7 @@ import React from 'react';
 import '../App/App.css';
 import { NavLink } from 'react-router-dom';
 
-function Body() {
+export default function Body() {
   return (
     
     <div className="Body">
@@ -16,7 +16,7 @@ function Body() {
   );
 }
 
-export default Body;
+// export default Body;
 
 //      <header className="App-header">
 //             <img src={logo} className="App-logo" alt="logo" />
