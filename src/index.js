@@ -5,13 +5,39 @@ import App from './Components/App/App';
 import { store } from './Components/counter/store';
 import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
-import { BrowserRouter as Router } from 'react-router-dom'; 
+import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'; 
+import Expenses from './Components/Expenses/Expenses';
+import Invoices from './Components/Invoices/Invoices';
+import Invoice from './Components/InvoiceItem/InvoiceItem';
 
 ReactDOM.render(
   <Router>
     <React.StrictMode>
       <Provider store={store}>
-        <App />
+      <Routes>
+      <Route path="/" element={<App />}>
+        <Route path="expenses" element={<Expenses />} />
+        <Route path="invoices" element={<Invoices />}>
+          <Route
+            index
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>Select an invoice</p>
+              </main>
+            }
+          />
+          <Route path=":invoiceId" element={<Invoice />} />
+        </Route>
+        <Route
+          path="*"
+          element={
+            <main style={{ padding: '1rem' }}>
+              <p>There's nothing here!</p>
+            </main>
+          }
+        />
+      </Route>
+    </Routes>
       </Provider>
     </React.StrictMode>
   </Router>,
