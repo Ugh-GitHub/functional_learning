@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './Components/App/App';
-import { store } from './Components/counter/store';
-import { Provider } from 'react-redux';
+// import { store } from './Components/counter/store';
+// import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'; 
 import Expenses from './Components/Expenses/Expenses';
@@ -12,12 +12,13 @@ import Invoice from './Components/InvoiceItem/InvoiceItem';
 
 ReactDOM.render(
   <Router>
-    <React.StrictMode>
-      <Provider store={store}>
+    {/* <React.StrictMode>
+      <Provider store={store}> */}
       <Routes>
       <Route path="/" element={<App />}>
         <Route path="expenses" element={<Expenses />} />
         <Route path="invoices" element={<Invoices />}>
+          {/* Default on page load */}
           <Route
             index
             element={
@@ -26,6 +27,7 @@ ReactDOM.render(
               </main>
             }
           />
+          {/*  */}
           <Route path=":invoiceId" element={<Invoice />} />
         </Route>
         <Route
@@ -38,8 +40,8 @@ ReactDOM.render(
         />
       </Route>
     </Routes>
-      </Provider>
-    </React.StrictMode>
+      {/* </Provider>
+    </React.StrictMode> */}
   </Router>,
   document.getElementById('root')
 );
