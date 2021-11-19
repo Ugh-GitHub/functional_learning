@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+// import { Outlet, useNavigate } from 'react-router-dom';
 import {
   MDBContainer,
   MDBNavbar,
@@ -9,7 +10,7 @@ import {
   MDBNavbarNav,
   MDBNavbarItem,
   MDBNavbarLink,
-  MDBBtn,
+  // MDBBtn,
   MDBDropdown,
   MDBDropdownToggle,
   MDBDropdownMenu,
@@ -84,34 +85,5 @@ export default function App() {
       </MDBNavbar>
       <Outlet />
     </div>
-    // <div>
-    //   <h1>Bookkeeper</h1>
-    //   <nav style={{ borderBottom: 'solid 1px', paddingBottom: '1rem' }}>
-
-    //     <MDBBtn
-    //       onClick={() => {
-    //         navigate('/invoices');
-    //       }}
-    //     >
-    //       Invoices
-    //     </MDBBtn> |{' '}
-    //     <MDBBtn
-    //       onClick={() => {
-    //         navigate('/expenses');
-    //       }}
-    //     >
-    //       Expenses
-    //     </MDBBtn>
-    //   </nav>
-    //   <Outlet />
-    // </div>
   );
 }
-{/* <MDBBtn
-          onClick={() => {
-            deleteInvoice(invoice.number);
-            navigate('/invoices');
-          }}
-        >
-          Delete
-        </MDBBtn> */}
