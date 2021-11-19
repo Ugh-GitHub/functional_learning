@@ -1,7 +1,9 @@
 import * as React from 'react';
-
+// import * as mdb from 'mdb-ui-kit';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getInvoice, deleteInvoice } from '../Data/Data';
+import { MDBBtn } from 'mdb-react-ui-kit';
+
 
 export default function Invoice() {
   let navigate = useNavigate();
@@ -16,14 +18,14 @@ export default function Invoice() {
       </p>
       <p>Due Date: {invoice.due}</p>
       <p>
-        <button
+        <MDBBtn
           onClick={() => {
             deleteInvoice(invoice.number);
             navigate('/invoices');
           }}
         >
           Delete
-        </button>
+        </MDBBtn>
       </p>
     </main>
   );
