@@ -9,6 +9,8 @@ import {
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBCardImage, MDBRipple, MDBRow, MDBCol, MDBCardOverlay} from 'mdb-react-ui-kit';
 import { getInvoices } from '../Data/Data';
 import Grid from '../Grid/Grid';
+import GridLayout from '../GridLayout/GridLayout';
+import './Invoices.css';
 
 // function QueryNavLink({ to, ...props }) {
 //   let location = useLocation();
@@ -31,7 +33,7 @@ export default function Invoices() {
             }
         }}/>  
         </form>
-        <Grid/>
+        <GridLayout/>
     </div>
   );
 }
