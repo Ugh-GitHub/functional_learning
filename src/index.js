@@ -10,36 +10,38 @@ import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 import Expenses from './Components/Expenses/Expenses';
 import Invoices from './Components/Invoices/Invoices';
 import Invoice from './Components/InvoiceItem/InvoiceItem';
+import Test from './Components/Test/Test';
 
 ReactDOM.render(
   <Router>
     {/* <React.StrictMode>
       <Provider store={store}> */}
       <Routes>
-      <Route path="/" element={<App />}>
-        <Route path="expenses" element={<Expenses />} />
-        <Route path="invoices" element={<Invoices />}>
-          {/* Default on page load */}
+        <Route path="/" element={<App />}>
+          <Route path="test" element={<Test />}/>
+          <Route path="expenses" element={<Expenses />} />
+          <Route path="invoices" element={<Invoices />}>
+            {/* Default on page load */}
+            <Route
+              index
+              element={
+                <main style={{ padding: '1rem' }}>
+                  <p>Select an invoice</p>
+                </main>
+              }
+            />
+            {/*  */}
+            <Route path=":invoiceId" element={<Invoice />} />
+          </Route>
           <Route
-            index
+            path="*"
             element={
               <main style={{ padding: '1rem' }}>
-                <p>Select an invoice</p>
+                <p>There's nothing here!</p>
               </main>
             }
           />
-          {/*  */}
-          <Route path=":invoiceId" element={<Invoice />} />
         </Route>
-        <Route
-          path="*"
-          element={
-            <main style={{ padding: '1rem' }}>
-              <p>There's nothing here!</p>
-            </main>
-          }
-        />
-      </Route>
     </Routes>
       {/* </Provider>
     </React.StrictMode> */}
