@@ -10,9 +10,9 @@ export default function Test() {
     return (
 
         <div>
-            <Accordion defaultActiveKey="0" flush>
+            <>
                 <VidInterviewItem/>   
-            </Accordion>
+            </>
         </div>
 
     );
