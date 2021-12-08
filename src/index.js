@@ -10,7 +10,7 @@ import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 import Expenses from './Components/Expenses/Expenses';
 import Invoices from './Components/Invoices/Invoices';
 import Invoice from './Components/InvoiceItem/InvoiceItem';
-import Test from './Components/Test/Test';
+import Test from './Components/VideoInterview/VideoInterview';
 
 ReactDOM.render(
   <Router>
