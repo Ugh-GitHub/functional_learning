@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { Accordion } from 'react-bootstrap';
 import VidInterviewItem from '../VidInterviewItem/VidInterviewItem';
 import './VideoInterview.css';
 // import { useSearchParams } from 'react-router-dom';
