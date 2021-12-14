@@ -11,6 +11,7 @@ import Expenses from './Components/Expenses/Expenses';
 import Invoices from './Components/Invoices/Invoices';
 import Invoice from './Components/InvoiceItem/InvoiceItem';
 import Test from './Components/VideoInterview/VideoInterview';
+import Resume from './Components/Resume/Resume';
 
 ReactDOM.render(
   <Router>
@@ -19,6 +20,7 @@ ReactDOM.render(
       <Routes>
         <Route path="/" element={<App />}>
           <Route path="test" element={<Test />}/>
+          <Route path="resume" element={<Resume />} />
           <Route path="expenses" element={<Expenses />} />
           <Route path="invoices" element={<Invoices />}>
             {/* Default on page load */}

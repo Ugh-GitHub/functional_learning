@@ -29,7 +29,7 @@ export default function App() {
       <MDBNavbar expand='lg' light bgColor='light'>
         <MDBContainer fluid>
           <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
-          <MDBNavbarBrand href='/expenses'>Resume</MDBNavbarBrand>
+          <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>
           <MDBNavbarBrand href='/invoices'>Portfolio</MDBNavbarBrand>
           <MDBNavbarBrand href='/test'>Interview Recordings</MDBNavbarBrand>
           <MDBNavbarBrand href='/projects'>Current Projects</MDBNavbarBrand>
