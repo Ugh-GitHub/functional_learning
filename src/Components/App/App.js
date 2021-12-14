@@ -43,11 +43,11 @@ export default function App() {
             <MDBNavbarNav className={'mr-auto mb-2 mb-lg-0', 'd-flex justify-content-center'}>
               <MDBNavbarItem>
                 <MDBNavbarLink active aria-current='page' href='/expenses'>
-                  Expenses
+                  Resume
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink href='/test'>Link</MDBNavbarLink>
+                <MDBNavbarLink href='/test'>Interview Recordings</MDBNavbarLink>
               </MDBNavbarItem>
 
               <MDBNavbarItem>

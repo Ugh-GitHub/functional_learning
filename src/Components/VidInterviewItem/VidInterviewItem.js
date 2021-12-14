@@ -20,7 +20,7 @@ export default function VidInterviewItem() {
                             <Accordion.Item eventKey={index}> 
                                 <Accordion.Header>{interview.question}</Accordion.Header> 
                                 <Accordion.Body>
-                                    <div class="container">
+                                    <div class="vid-container">
                                         <iframe src={`https://www.youtube.com/embed/${interview.link}`}
                                             frameborder='50'
                                             allow='autoplay; encrypted-media'
