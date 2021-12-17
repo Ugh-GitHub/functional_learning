@@ -22,6 +22,8 @@ export default function VidInterviewItem() {
                                 <Accordion.Body>
                                     <div class="vid-container">
                                         <iframe src={`https://www.youtube.com/embed/${interview.link}`}
+                                            async
+                                            loading='lazy'
                                             frameborder='50'
                                             allow='autoplay; encrypted-media'
                                             allowfullscreen

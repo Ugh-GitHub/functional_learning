@@ -1,0 +1,39 @@
+.resumeHeader {
+    color: red;
+    font-size: xx-large;
+}
+
+.resumeDate {
+    color: rgb(187, 187, 187);
+    font-size: medium;
+    padding-left: 25px;
+}
+
+.expTitle {
+    font-size: x-large;
+}
+
+.jobSummary {
+    padding: 25px;
+}
+
+.resumeFormat {
+    line-height: 1.2;
+    padding-left: 50px;
+    padding-top: 30px;
+    padding-right: 50px;
+}
+
+.sectionDivides {
+    padding-bottom: 10px;
+}
+
+ul { 
+    padding-top: 10px;
+}
+
+.logoIcon {
+    height: 35px;
+    padding-top: 6px;
+    padding-left: 8px;
+}
