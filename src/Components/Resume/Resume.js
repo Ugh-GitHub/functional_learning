@@ -39,7 +39,7 @@ export default function Resume() {
                     <li>Grew the Amazon account from the $1,000’s to $4 million/yr.</li>
                     <li>Grew the W.W. Grainger account from under $1 million/yr. (2013) to nearly $4 million/yr while increasing profitability, acquiring market share and eliminating a major competitor.</li>
                     <li>Created the company’s first digital product catalog from nothing to nearly 30,000 SKUs.</li>
-                    <li>Designed and implemented process improvements that automated the company’s new product creation process, bringing competitive parity to our safety sign catalog and reducing required hours for over 16,000 SKUs down from >4,500 to under 300.</li>
+                    <li>Designed and implemented process improvements that automated the company’s new product creation process, bringing competitive parity to our safety sign catalog and reducing required hours for over 16,000 SKUs down from &gt;4,500 to under 300.</li>
                     <li>Developed and coordinated implementation of new packaging for the decal product line without increasing scrap rate, eliminating labelling requirements and saving time and money.</li>
                     <li>Coordinated on-site and off-site with Amazon & W. W. Grainger accounts for marketing, negotiations, SaaS development, and to resolve logistics and operational issues.</li>
                     <li>Manage product catalog uploads, keywords, & metadata for Amazon.com & W. W. Grainger accounts.</li>
