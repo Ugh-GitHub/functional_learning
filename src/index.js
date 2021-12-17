@@ -12,6 +12,7 @@ import Invoices from './Components/Invoices/Invoices';
 import Invoice from './Components/InvoiceItem/InvoiceItem';
 import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
+import Home from './Components/Home/Home';
 
 ReactDOM.render(
   <Router>
@@ -19,10 +20,11 @@ ReactDOM.render(
       <Provider store={store}> */}
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="test" element={<Test />}/>
+          <Route index element={<Home />}/>
+          <Route path="interviews" element={<Test />}/>
           <Route path="resume" element={<Resume />} />
-          <Route path="expenses" element={<Expenses />} />
-          <Route path="invoices" element={<Invoices />}>
+          <Route path="projects" element={<Expenses />} />
+          <Route path="portfolio" element={<Invoices />}>
             {/* Default on page load */}
             <Route
               index

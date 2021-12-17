@@ -7,7 +7,8 @@ export default function VidInterviewItem() {
     let AccordionItems = [
         {question: "Why should we hire you?", link:'E7wJTI-1dvQ'},
         {question: "What are some other skills we should know about?", link:'LYG7sMtb6u8'},
-        {question: "Tell me about a time you failed. How did you deal with the situation?", link:'Nkx1hWs88Ek'}];
+        {question: "Tell me about a time you failed. How did you deal with the situation?", link:'Nkx1hWs88Ek'},
+        {question: "Test", link:'gu6cequxkLQ'}];
 
     return (
         <>
