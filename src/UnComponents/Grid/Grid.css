@@ -1,16 +1,18 @@
+/* $grid-breakpoints: ( xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl:
+1400px ); */
+
 .cards {
-    display: inline grid;
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;     
-    grid-gap: 2rem;
-    color: red;
-    background-color: red;
+    grid-gap: 1rem;
+    display: inline-block;
 }
      
 .card {
     border: 2px solid whitesmoke;
     border-radius: 4px;
-    padding: 1rem;
+    padding: .5rem;
     background-color: lightsteelblue;    
 }
 

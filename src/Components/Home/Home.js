@@ -4,7 +4,7 @@ export default function Home() {
 
   return (
     <div>
-        Hello World
+        Here is where the bio goes, along with a headshot
     </div>
   );
 }

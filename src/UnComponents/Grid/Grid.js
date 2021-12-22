@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBCardImage, MDBRipple, MDBRow, MDBCol, MDBCardOverlay} from 'mdb-react-ui-kit';
 import { getInvoices } from '../Data/Data';
 import { useSearchParams } from 'react-router-dom';
-import './GridLayout';
+import './Grid.css';
 import GridItem from '../GridItem/GridItem';
 
 export default function Grid() {
@@ -11,7 +11,7 @@ export default function Grid() {
   
     return (
 
-        <div className="cards">
+        <div>
             {invoices
             .filter((invoice) => {
                 let filter = searchParams.get('filter');
@@ -20,11 +20,7 @@ export default function Grid() {
                 return name.startsWith(filter.toLowerCase());
             })
             .map((invoice, index) => (
-                    <div class="card" key={index}>
-                        <div class="container">
-                            <GridItem invoice={invoice}/>
-                        </div>
-                    </div>
+                <GridItem key={index} invoice={invoice} />
             ))}
         </div>
 

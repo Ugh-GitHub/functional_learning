@@ -8,7 +8,7 @@ import App from './Components/App/App';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'; 
 import Expenses from './Components/Expenses/Expenses';
-import Invoices from './Components/Invoices/Invoices';
+import Portfolio from './Components/Portfolio/Portfolio';
 import Invoice from './Components/InvoiceItem/InvoiceItem';
 import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
@@ -24,7 +24,7 @@ ReactDOM.render(
           <Route path="interviews" element={<Test />}/>
           <Route path="resume" element={<Resume />} />
           <Route path="projects" element={<Expenses />} />
-          <Route path="portfolio" element={<Invoices />}>
+          <Route path="portfolio" element={<Portfolio />}>
             {/* Default on page load */}
             <Route
               index
