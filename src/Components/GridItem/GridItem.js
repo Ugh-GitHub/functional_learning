@@ -9,6 +9,7 @@ export default function GridItem({ invoice }) {
         <>
             <img></img>
             <h4><b>{invoice.name}</b></h4>
+            <p>date</p>
             <p>Text goes here</p>
         </>
     );
