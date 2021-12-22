@@ -6,7 +6,6 @@ import {
 } from 'react-router-dom';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBCardImage, MDBRipple, MDBRow, MDBCol, MDBCardOverlay} from 'mdb-react-ui-kit';
 import { getInvoices } from '../Data/Data';
-import Grid from '../Grid/Grid';
 import GridLayout from '../GridLayout/GridLayout';
 import './Portfolio.css';
 
