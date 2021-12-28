@@ -1,25 +1,32 @@
 
 @media (max-width: 930px) {
+    .sectionDivides {
+        width: 500px;
+        margin: 0 auto;
+    }
+
     .headshot {
-        
+        display: block;
+        margin: 0 auto;
+        padding-bottom: 15px;
     }
     
     .aboutHeader {
-        color: blue;
         font-size: xx-large;
-        align: center;
+        margin: 0 auto;
+        text-align: center;
     }
     
     .aboutSummary {
         width: 500px;
         padding: 25px;
         display: flex;
-        
+        margin: auto;
+        text-align: center;
     }
     
     .homeFormat {
         line-height: 1.2;
-        padding-left: 50px;
         padding-top: 30px;
         padding-right: 50px;
     }
@@ -32,7 +39,6 @@
     }
     
     .aboutHeader {
-        color: red;
         padding-left: 50px;
         font-size: xx-large;
     }
@@ -63,7 +69,6 @@
     }
     
     .aboutHeader {
-        color: green;
         font-size: xx-large;
         padding-left: 50px;
     }

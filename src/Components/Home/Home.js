@@ -7,7 +7,7 @@ export default function Home() {
     <div className="homeFormat">
         <div className="sectionDivides">
           <img src="/images/WordPress_Headshot.jpeg" className="headshot" ></img>
-          <h1 className="aboutHeader">About</h1>
+          <h1 className="aboutHeader">Welcome!</h1>
           <p className="aboutSummary">
             Accomplished Account Manager with over 6 years experience in managing and solutioning for two $3-5 million accounts. 
             Currently pivoting into a software engineering role where I can leverage my aptitude for learning, problem solving and communication. 
