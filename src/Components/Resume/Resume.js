@@ -16,10 +16,7 @@ export default function Resume() {
                 </a>
             </div>
             
-            <div className="sectionDivides">
-                <h1 className="resumeHeader">About</h1>
-                <span className="jobSummary">Accomplished Account Manager with over 6 years experience in managing and solutioning for two $3-5 million accounts. Currently pivoting into a software engineering role where I can leverage my aptitude for learning, problem solving and communication. You can currently find me learning Typescript and AWS, building a React Native app, improvising on stage, or bouldering.</span>
-            </div>
+            
             
             <div className="sectionDivides">
                 <h1 className="resumeHeader">Experience</h1>
