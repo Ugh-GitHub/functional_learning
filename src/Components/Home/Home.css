@@ -1,3 +1,10 @@
+.headshot {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 80%;
+    margin-right: 50px;
+}
 
 @media (max-width: 930px) {
     .sectionDivides {
@@ -8,7 +15,7 @@
     .headshot {
         display: block;
         margin: 0 auto;
-        padding-bottom: 15px;
+        margin-bottom: 25px;
     }
     
     .aboutHeader {
@@ -39,7 +46,8 @@
     }
     
     .aboutHeader {
-        padding-left: 50px;
+        margin-top: 15px;
+        margin-left: 50px;
         font-size: xx-large;
     }
     
@@ -69,8 +77,9 @@
     }
     
     .aboutHeader {
+        margin-top: 15px;
         font-size: xx-large;
-        padding-left: 50px;
+        
     }
     
     .aboutSummary {

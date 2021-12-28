@@ -4,9 +4,11 @@ import {
 } from 'react-router-dom';
 import GridLayout from '../GridLayout/GridLayout';
 import './Portfolio.css';
+import ButtonGrid from '../ButtonGrid/ButtonGrid';
 
 export default function Invoices() {
   let [searchParams, setSearchParams] = useSearchParams({ replace: true });
+  
 
   return (
     <div >
@@ -21,6 +23,7 @@ export default function Invoices() {
             }
         }}/>  
         </form>
+        <ButtonGrid/>
         <GridLayout/>
     </div>
   );

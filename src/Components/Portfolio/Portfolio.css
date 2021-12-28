@@ -8,10 +8,6 @@
     margin: auto;
 }
 
-/* .form-control {
-    width: 600px;
-} */
-
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);    
@@ -21,7 +17,6 @@
 }
      
 .container {
-    /* height: 200px; */
     border-radius: 4px;   
 }
 

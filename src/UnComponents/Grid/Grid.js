@@ -2,7 +2,7 @@ import * as React from 'react';
 import { MDBCard, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBCardImage, MDBRipple, MDBRow, MDBCol, MDBCardOverlay} from 'mdb-react-ui-kit';
 import { getInvoices } from '../Data/Data';
 import { useSearchParams } from 'react-router-dom';
-import './Grid.css';
+// import './Grid.css';
 import GridItem from '../GridItem/GridItem';
 
 export default function Grid() {
