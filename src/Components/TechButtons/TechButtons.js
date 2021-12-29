@@ -1,10 +1,14 @@
 import * as React from 'react';
 
 export default function TechButtons({ technology }) {
+    function buttonToggle( tech ) {
+        console.log(tech);
+    }
+
     return (
 
-        <a className={`card ${technology.type}`}>
+        <div className={`card ${technology.type}`} onClick={() => buttonToggle(technology.name)}>
             <b>{technology.name}</b>
-        </a>
+        </div>
     );
 }
