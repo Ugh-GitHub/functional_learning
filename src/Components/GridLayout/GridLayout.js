@@ -11,16 +11,16 @@ export default function GridLayout({childToParent}) {
             //   'React',
             //   'Redux'
           ],
-          amount: "$10,800",
+          github: "https://github.com/Ugh-GitHub/i-have-a-project",
           due: "12/05/1995"
         },
         {
-          name: "Sign Maker",
+          name: "Sign Designer",
           technologies: [
             'React',
             // 'Redux'
         ],
-          amount: "$8,000",
+          github: "https://github.com/Ugh-GitHub/sign_designer",
           due: "10/31/2000"
         },
         {
@@ -29,7 +29,7 @@ export default function GridLayout({childToParent}) {
             'React',
             'Redux'
         ],
-          amount: "$9,500",
+          github: "https://github.com/Ugh-GitHub/jquery-server-side-calculator",
           due: "07/22/2003"
         },
         {
@@ -38,7 +38,7 @@ export default function GridLayout({childToParent}) {
             'React',
             'Redux'
         ],
-          amount: "$14,000",
+          github: "https://github.com/Ugh-GitHub/redux-feedback-looper",
           due: "09/01/1997"
         },
         {
@@ -47,7 +47,7 @@ export default function GridLayout({childToParent}) {
               'React',
               'Redux'
           ],
-          amount: "$4,600",
+          github: "https://github.com/Ugh-GitHub/The-Weekend-sql-to-do-list",
           due: "01/27/2998"
         }
       ];
@@ -83,8 +83,8 @@ export default function GridLayout({childToParent}) {
                 } 
             })
             .map((project, index) => (
-                    <div class="card" key={index}>
-                        <div class="container" onClick={() => {
+                    <div className="card" key={index}>
+                        <div className="container" onClick={() => {
                             childToParent(project);
                         }}>
                             <GridItem project={project}/>
