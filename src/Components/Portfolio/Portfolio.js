@@ -1,30 +1,47 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import {
   useSearchParams,
 } from 'react-router-dom';
 import GridLayout from '../GridLayout/GridLayout';
 import './Portfolio.css';
 import ButtonGrid from '../ButtonGrid/ButtonGrid';
+import Modal from '../Modal/Modal';
 
 export default function Invoices() {
   let [searchParams, setSearchParams] = useSearchParams({ replace: true });
-  
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const [data, setData] = useState('');
+
+  const childToParent = () => {
+    // alert("this is an alert");
+    setModalOpen(true);
+  }
 
   return (
     <div >
-        <form className='d-flex input-group w-auto'>
-            <input type='search' className='form-control' placeholder='Search by Project Title' aria-label='Search' value={searchParams.get('filter') || ''}
+        {/* <form className='d-flex input-group w-auto'>
+            <input type='search' className='form-control' placeholder='Search by Project Title' aria-label='Search' value={searchParams.get('term') || ''}
         onChange={(event) => {
-            let filter = event.target.value;
-            if (filter) {
-            setSearchParams({ filter }, { replace: true });
+            let term = event.target.value;
+            if (term) {
+            setSearchParams({ term }, { replace: true });
             } else {
             setSearchParams({}, { replace: true });
             }
         }}/>  
-        </form>
+        </form> */}
+        {modalOpen && <Modal setOpenModal={setModalOpen}/>}
+        <button
+          className="openModalBtn"
+          onClick={() => {
+          setModalOpen(true);
+          }}
+        >
+          Open
+        </button>        
         <ButtonGrid/>
-        <GridLayout/>
+        <GridLayout childToParent={childToParent}/>
     </div>
   );
 }

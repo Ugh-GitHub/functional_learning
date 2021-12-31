@@ -20,6 +20,7 @@ import {
 } from 'mdb-react-ui-kit';
 import { useState } from 'react';
 
+
 export default function App() {
   // let navigate = useNavigate();
   const [showBasic, setShowBasic] = useState(false);
@@ -47,6 +48,7 @@ export default function App() {
         </MDBContainer>
       </MDBNavbar>
       <Outlet />
+      
     </div>
   );
 }
