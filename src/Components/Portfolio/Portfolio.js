@@ -20,7 +20,7 @@ export default function Invoices() {
 
   useEffect(() => {
     console.log('use effect ran in Portfolio');
-    console.log(project);
+    console.log(project.name);
   });
 
   return (
@@ -36,7 +36,7 @@ export default function Invoices() {
             }
         }}/>  
         </form> */}
-        {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={setProject}/>}       
+        {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={project}/>}       
         <ButtonGrid/>
         <GridLayout childToParent={childToParent}/>
     </div>

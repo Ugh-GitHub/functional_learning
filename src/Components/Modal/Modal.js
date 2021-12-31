@@ -2,19 +2,10 @@ import React, { useEffect, useState } from "react";
 import "./Modal.css";
 
 function Modal({ setOpenModal, setProjectData }) {
-    const [project, setProject] = useState({
-        name: "Calculator",
-        technologies: [
-          'React',
-          'Redux'
-        ],
-        amount: "$9,500",
-        due: "07/22/2003"
-    });
 
     useEffect(() => {
         console.log('use effect ran');
-        console.log(setProjectData.technologies);
+        console.log(setProjectData);
     });
 
   return (
