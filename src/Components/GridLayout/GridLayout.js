@@ -2,8 +2,6 @@ import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import './GridLayout';
 import GridItem from '../GridItem/GridItem';
-import useModal from '../useModal/useModal';
-import Modal from '../Modal/Modal';
 
 export default function GridLayout({childToParent}) {
     let projects = [
@@ -55,7 +53,6 @@ export default function GridLayout({childToParent}) {
       ];
 
     let [searchParams, setSearchParams] = useSearchParams({ replace: true });
-    const [modalOpen, setModalOpen] = useState(false);
   
     return (
         
@@ -88,7 +85,7 @@ export default function GridLayout({childToParent}) {
             .map((project, index) => (
                     <div class="card" key={index}>
                         <div class="container" onClick={() => {
-                            childToParent();
+                            childToParent(project);
                         }}>
                             <GridItem project={project}/>
                         </div>

@@ -1,7 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Modal.css";
 
-function Modal({ setOpenModal}) {
+function Modal({ setOpenModal, setProjectData }) {
+    const [project, setProject] = useState({
+        name: "Calculator",
+        technologies: [
+          'React',
+          'Redux'
+        ],
+        amount: "$9,500",
+        due: "07/22/2003"
+    });
+
+    useEffect(() => {
+        console.log('use effect ran');
+        console.log(setProjectData.technologies);
+    });
+
   return (
     <div className="modalBackground">
       <div className="modalContainer">
@@ -15,7 +30,7 @@ function Modal({ setOpenModal}) {
           </button>
         </div>
         <div className="title">
-          <h1>Are You Sure You Want to Continue?</h1>
+          <h1>{setProjectData.name}</h1>
         </div>
         <div className="body">
           <p>The next page looks amazing. Hope you want to go there!</p>

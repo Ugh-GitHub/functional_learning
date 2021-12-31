@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   useSearchParams,
 } from 'react-router-dom';
@@ -10,13 +10,18 @@ import Modal from '../Modal/Modal';
 export default function Invoices() {
   let [searchParams, setSearchParams] = useSearchParams({ replace: true });
   const [modalOpen, setModalOpen] = useState(false);
+  const [project, setProject] = useState('');
 
-  const [data, setData] = useState('');
-
-  const childToParent = () => {
+  const childToParent = (data) => {
     // alert("this is an alert");
+    setProject(data);
     setModalOpen(true);
   }
+
+  useEffect(() => {
+    console.log('use effect ran in Portfolio');
+    console.log(project);
+  });
 
   return (
     <div >
@@ -31,7 +36,7 @@ export default function Invoices() {
             }
         }}/>  
         </form> */}
-        {modalOpen && <Modal setOpenModal={setModalOpen}/>}       
+        {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={setProject}/>}       
         <ButtonGrid/>
         <GridLayout childToParent={childToParent}/>
     </div>
