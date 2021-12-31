@@ -60,14 +60,6 @@ export default function GridLayout({childToParent}) {
     return (
         
         <div className="cards">
-            <button
-                className="openModalBtn"
-                onClick={() => {
-                    childToParent();
-                }}
-            >
-                Open
-            </button>
             {projects
             // .filter((projects) => {
             //     let term = searchParams.get('term');

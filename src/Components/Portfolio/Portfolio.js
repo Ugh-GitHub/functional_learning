@@ -31,15 +31,7 @@ export default function Invoices() {
             }
         }}/>  
         </form> */}
-        {modalOpen && <Modal setOpenModal={setModalOpen}/>}
-        <button
-          className="openModalBtn"
-          onClick={() => {
-          setModalOpen(true);
-          }}
-        >
-          Open
-        </button>        
+        {modalOpen && <Modal setOpenModal={setModalOpen}/>}       
         <ButtonGrid/>
         <GridLayout childToParent={childToParent}/>
     </div>
