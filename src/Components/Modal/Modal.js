@@ -28,8 +28,11 @@ function Modal({ setOpenModal, setProjectData }) {
           >
             Cancel
           </button>
+          <a href={setProjectData.heroku}>
+              <img src="/images/heroku-logo-solid-purple.png" className="logoIcon" alt="Heroku Logo"/>
+          </a>
           <a href={setProjectData.github}>
-            <img src="/images/GitHub-Mark-64px.png" className="logoIcon" alt="GitHub Logo"></img>
+            <img src="/images/GitHub-Mark-64px.png" className="logoIcon" alt="GitHub Logo"/>
           </a>
         </div>
       </div>

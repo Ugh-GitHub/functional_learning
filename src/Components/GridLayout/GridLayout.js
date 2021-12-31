@@ -12,7 +12,7 @@ export default function GridLayout({childToParent}) {
             //   'Redux'
           ],
           github: "https://github.com/Ugh-GitHub/i-have-a-project",
-          due: "12/05/1995"
+          heroku: "12/05/1995"
         },
         {
           name: "Sign Designer",
@@ -21,7 +21,7 @@ export default function GridLayout({childToParent}) {
             // 'Redux'
         ],
           github: "https://github.com/Ugh-GitHub/sign_designer",
-          due: "10/31/2000"
+          heroku: "https://agile-atoll-25766.herokuapp.com/#/home"
         },
         {
           name: "Calculator",
@@ -30,7 +30,7 @@ export default function GridLayout({childToParent}) {
             'Redux'
         ],
           github: "https://github.com/Ugh-GitHub/jquery-server-side-calculator",
-          due: "07/22/2003"
+          heroku: "07/22/2003"
         },
         {
           name: "Feedback Loop",
@@ -39,7 +39,7 @@ export default function GridLayout({childToParent}) {
             'Redux'
         ],
           github: "https://github.com/Ugh-GitHub/redux-feedback-looper",
-          due: "09/01/1997"
+          heroku: "09/01/1997"
         },
         {
           name: "To-Do App",
@@ -48,7 +48,7 @@ export default function GridLayout({childToParent}) {
               'Redux'
           ],
           github: "https://github.com/Ugh-GitHub/The-Weekend-sql-to-do-list",
-          due: "01/27/2998"
+          heroku: "01/27/2998"
         }
       ];
 
