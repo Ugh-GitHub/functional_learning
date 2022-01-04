@@ -39,7 +39,7 @@ export default function GridLayout({childToParent}) {
             'Redux'
         ],
           github: "https://github.com/Ugh-GitHub/redux-feedback-looper",
-          heroku: "09/01/1997"
+          heroku: "https://secure-anchorage-94469.herokuapp.com/#/"
         },
         {
           name: "To-Do App",
