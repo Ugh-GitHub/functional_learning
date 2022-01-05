@@ -48,7 +48,7 @@ export default function GridLayout({childToParent}) {
               'Redux'
           ],
           github: "https://github.com/Ugh-GitHub/The-Weekend-sql-to-do-list",
-          heroku: "01/27/2998"
+          heroku: "https://pure-chamber-61508.herokuapp.com/"
         }
       ];
 
