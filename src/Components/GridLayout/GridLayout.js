@@ -78,10 +78,8 @@ export default function GridLayout({ childToParent, setTechData }) {
                  return true;
               }
               else {
-                let intersection = new Set(
-                  Array.from(projects.technologies).filter(x => techs.includes(x))
-                );
-                if(Array.from(intersection).length === techs.length) {
+                let intersection = projects.technologies.filter(x => techs.includes(x));
+                if(intersection.length === techs.length) {
                   return true;
                 }
                 else {
