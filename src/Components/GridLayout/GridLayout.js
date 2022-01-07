@@ -4,6 +4,7 @@ import './GridLayout';
 import GridItem from '../GridItem/GridItem';
 
 export default function GridLayout({childToParent}) {
+    var assert = require('assert');
     let projects = [
         {
           name: "I Have a Project",
@@ -23,15 +24,15 @@ export default function GridLayout({childToParent}) {
           github: "https://github.com/Ugh-GitHub/sign_designer",
           heroku: "https://agile-atoll-25766.herokuapp.com/#/home"
         },
-        {
-          name: "Calculator",
-          technologies: [
-            'React',
-            'Redux'
-        ],
-          github: "https://github.com/Ugh-GitHub/jquery-server-side-calculator",
-          heroku: "07/22/2003"
-        },
+        // {
+        //   name: "Calculator",
+        //   technologies: [
+        //     'React',
+        //     'Redux'
+        // ],
+        //   github: "https://github.com/Ugh-GitHub/jquery-server-side-calculator",
+        //   heroku: "07/22/2003"
+        // },
         {
           name: "Feedback Loop",
           technologies: [
@@ -72,15 +73,18 @@ export default function GridLayout({childToParent}) {
             // REPLACE THIS WITH ARRAY COMPARISON
 
             .filter((projects) => {
-                let term = searchParams.get('term');
-                // If clause for if there are no toggles selected
-                if (!term) {
-                    return true;
-                }
-                else {
-                    let name = projects.name.toLowerCase();
-                    return name.startsWith(term.toLowerCase());
-                } 
+              // let techs = set of buttons toggled on in an array;
+              // if (techs is empty) {
+              //    return true;
+              // }
+              // else { Junk below }
+              // const intersection = new Set(
+              //   Array.from(techs).filter(x => projects.has(x))
+              // );
+              
+              // assert.deepEqual(
+              //   Array.from(intersection), techs
+              // );
             })
             .map((project, index) => (
                     <div className="card" key={index}>
