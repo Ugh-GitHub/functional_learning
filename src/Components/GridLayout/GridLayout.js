@@ -8,8 +8,8 @@ export default function GridLayout({ childToParent, setTechData }) {
         {
           name: "I Have a Project",
           technologies: [
-            //   'React',
-            //   'Redux'
+              'React',
+              'Redux'
           ],
           github: "https://github.com/Ugh-GitHub/i-have-a-project",
           heroku: "12/05/1995"
@@ -18,7 +18,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           name: "Sign Designer",
           technologies: [
             'React',
-            // 'Redux'
+            'Redux'
         ],
           github: "https://github.com/Ugh-GitHub/sign_designer",
           heroku: "https://agile-atoll-25766.herokuapp.com/#/home"
@@ -51,27 +51,11 @@ export default function GridLayout({ childToParent, setTechData }) {
           heroku: "https://pure-chamber-61508.herokuapp.com/"
         }
       ];
-
-    // let [searchParams, setSearchParams] = useSearchParams({ replace: true });
-    
   
     return (
         
         <div className="cards">
             {projects
-            // .filter((projects) => {
-            //     let term = searchParams.get('term');
-            //     if (!term) {
-            //         return true;
-            //     }
-            //     else {
-            //         let name = projects.name.toLowerCase();
-            //         return name.startsWith(term.toLowerCase());
-            //     } 
-            // })
-            
-            // REPLACE THIS WITH ARRAY COMPARISON
-
             .filter((projects) => {
               let techs = setTechData;
               if (techs.length === 0) {
