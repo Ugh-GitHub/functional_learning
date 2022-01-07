@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+// import { useSearchParams } from 'react-router-dom';
 import './GridLayout';
 import GridItem from '../GridItem/GridItem';
 
@@ -53,7 +53,7 @@ export default function GridLayout({childToParent}) {
         }
       ];
 
-    let [searchParams, setSearchParams] = useSearchParams({ replace: true });
+    // let [searchParams, setSearchParams] = useSearchParams({ replace: true });
   
     return (
         
@@ -72,21 +72,21 @@ export default function GridLayout({childToParent}) {
             
             // REPLACE THIS WITH ARRAY COMPARISON
 
-            .filter((projects) => {
-              // let techs = set of buttons toggled on in an array;
-              // if (techs is empty) {
-              //    return true;
-              // }
-              // else {
-                // const intersection = new Set(
-                //   Array.from(techs).filter(x => projects.technologies.has(x))
-                // );
+            // .filter((projects) => {
+            //   let techs = set of buttons toggled on in an array;
+            //   if (techs is empty) {
+            //      return true;
+            //   }
+            //   else {
+            //     const intersection = new Set(
+            //       Array.from(techs).filter(x => projects.technologies.has(x))
+            //     );
                 
-                // assert.deepEqual(
-                //   Array.from(intersection), techs
-                // );
-              // }
-            })
+            //     assert.deepEqual(
+            //       Array.from(intersection), techs
+            //     );
+            //   }
+            // })
             .map((project, index) => (
                     <div className="card" key={index}>
                         <div className="container" onClick={() => {

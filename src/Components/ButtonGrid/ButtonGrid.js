@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import TechButtons from '../TechButtons/TechButtons';
+// import TechButtons from '../TechButtons/TechButtons';
 import './ButtonGrid.css';
 
-export default function ButtonGrid() {
-    const [tech, setTech] = useState([]);
+export default function ButtonGrid({buttonToggle}) {
+    
     let technologies = [
         {
             name: 'React', 
@@ -31,14 +31,7 @@ export default function ButtonGrid() {
         },
     ];
 
-    function buttonToggle( technology ) {
-        if (tech.indexOf(technology.name) > -1 ) {
-            setTech(tech.filter(item => item !== technology.name));
-        }
-        else {
-            setTech((tech) => [...tech,technology.name]);
-        }
-    }
+    
 
     return (
 
