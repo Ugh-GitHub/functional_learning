@@ -25,8 +25,7 @@ export default function Invoices() {
     }
     else {
         setTech((tech) => [...tech,technology.name]);
-    }
-    
+    } 
   }
 
   useEffect(() => {
@@ -49,7 +48,7 @@ export default function Invoices() {
         </form> */}
         {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={project}/>}       
         <ButtonGrid buttonToggle={buttonToggle}/>
-        <GridLayout childToParent={childToParent}/>
+        <GridLayout childToParent={childToParent} setTechData={tech}/>
     </div>
   );
 }

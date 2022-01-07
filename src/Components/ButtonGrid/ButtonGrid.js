@@ -3,35 +3,83 @@ import React, { useState } from 'react';
 import './ButtonGrid.css';
 
 export default function ButtonGrid({buttonToggle}) {
-    
-    let technologies = [
-        {
-            name: 'React', 
-            type: 'technology'
-        }, 
-        {
-            name: 'Redux', 
-            type: 'technology'
-        },
-        {
-            name: 'SQL',
-            type: 'language'
-        },
-        {
-            name: 'Javascript',
-            type: 'language'
-        },
-        {
-            name: 'HTML',
-            type: 'language'
-        },
-        {
-            name: 'Typescript',
-            type: 'language'
-        },
-    ];
+    const [technologies, setTechnologies] = useState([{
+        name: 'React', 
+        type: 'technology',
+        toggle: ''
+    }, 
+    {
+        name: 'Redux', 
+        type: 'technology',
+        toggle: ''
+    },
+    {
+        name: 'SQL',
+        type: 'language',
+        toggle: ''
+    },
+    {
+        name: 'Javascript',
+        type: 'language',
+        toggle: ''
+    },
+    {
+        name: 'HTML',
+        type: 'language',
+        toggle: ''
+    },
+    {
+        name: 'Typescript',
+        type: 'language',
+        toggle: ''
+    },]);
+    // let technologies = [
+    //     {
+    //         name: 'React', 
+    //         type: 'technology',
+    //         toggle: ''
+    //     }, 
+    //     {
+    //         name: 'Redux', 
+    //         type: 'technology',
+    //         toggle: ''
+    //     },
+    //     {
+    //         name: 'SQL',
+    //         type: 'language',
+    //         toggle: ''
+    //     },
+    //     {
+    //         name: 'Javascript',
+    //         type: 'language',
+    //         toggle: ''
+    //     },
+    //     {
+    //         name: 'HTML',
+    //         type: 'language',
+    //         toggle: ''
+    //     },
+    //     {
+    //         name: 'Typescript',
+    //         type: 'language',
+    //         toggle: ''
+    //     },
+    // ];
 
+    function selectToggle(technology) {
+        var index = technologies.map(function(e) { return e.name; }).indexOf(technology.name);
+        if (technologies[index].toggle === '') {
+            technologies[index].toggle = 'toggled';
+        }
+        else {
+            technologies[index].toggle = '';
+        }
+    }
     
+    function someFunction(technology) {
+        selectToggle(technology);
+        buttonToggle(technology);
+    }
 
     return (
 
@@ -40,7 +88,7 @@ export default function ButtonGrid({buttonToggle}) {
             .map((technology, index) => (
                     <div key={index}>
                         <div>
-                            <button onClick={() => buttonToggle(technology)}>{technology.name}</button>
+                            <button className={technology.toggle} onClick={() => someFunction(technology)}>{technology.name}</button>
                         </div>
                     </div>
             ))}

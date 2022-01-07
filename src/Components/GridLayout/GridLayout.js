@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import './GridLayout';
 import GridItem from '../GridItem/GridItem';
 
-export default function GridLayout({childToParent}) {
+export default function GridLayout({ childToParent, setTechData }) {
     var assert = require('assert');
     let projects = [
         {
@@ -54,6 +54,7 @@ export default function GridLayout({childToParent}) {
       ];
 
     // let [searchParams, setSearchParams] = useSearchParams({ replace: true });
+    
   
     return (
         
@@ -72,21 +73,23 @@ export default function GridLayout({childToParent}) {
             
             // REPLACE THIS WITH ARRAY COMPARISON
 
-            // .filter((projects) => {
-            //   let techs = set of buttons toggled on in an array;
-            //   if (techs is empty) {
-            //      return true;
-            //   }
-            //   else {
-            //     const intersection = new Set(
-            //       Array.from(techs).filter(x => projects.technologies.has(x))
-            //     );
-                
-            //     assert.deepEqual(
-            //       Array.from(intersection), techs
-            //     );
-            //   }
-            // })
+            .filter((projects) => {
+              let techs = setTechData;
+              if (techs.length === 0) {
+                 return true;
+              }
+              else {
+                let intersection = new Set(
+                  Array.from(projects.technologies).filter(x => techs.includes(x))
+                );
+                if(Array.from(intersection).length > 0) {
+                  return true;
+                }
+                else {
+                  return false;
+                }
+              }
+            })
             .map((project, index) => (
                     <div className="card" key={index}>
                         <div className="container" onClick={() => {
