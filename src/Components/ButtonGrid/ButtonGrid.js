@@ -33,38 +33,6 @@ export default function ButtonGrid({buttonToggle}) {
         type: 'language',
         toggle: ''
     },]);
-    // let technologies = [
-    //     {
-    //         name: 'React', 
-    //         type: 'technology',
-    //         toggle: ''
-    //     }, 
-    //     {
-    //         name: 'Redux', 
-    //         type: 'technology',
-    //         toggle: ''
-    //     },
-    //     {
-    //         name: 'SQL',
-    //         type: 'language',
-    //         toggle: ''
-    //     },
-    //     {
-    //         name: 'Javascript',
-    //         type: 'language',
-    //         toggle: ''
-    //     },
-    //     {
-    //         name: 'HTML',
-    //         type: 'language',
-    //         toggle: ''
-    //     },
-    //     {
-    //         name: 'Typescript',
-    //         type: 'language',
-    //         toggle: ''
-    //     },
-    // ];
 
     function selectToggle(technology) {
         var index = technologies.map(function(e) { return e.name; }).indexOf(technology.name);

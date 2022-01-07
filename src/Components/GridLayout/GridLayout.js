@@ -4,7 +4,6 @@ import './GridLayout';
 import GridItem from '../GridItem/GridItem';
 
 export default function GridLayout({ childToParent, setTechData }) {
-    var assert = require('assert');
     let projects = [
         {
           name: "I Have a Project",
@@ -82,7 +81,7 @@ export default function GridLayout({ childToParent, setTechData }) {
                 let intersection = new Set(
                   Array.from(projects.technologies).filter(x => techs.includes(x))
                 );
-                if(Array.from(intersection).length > 0) {
+                if(Array.from(intersection).length === techs.length) {
                   return true;
                 }
                 else {
