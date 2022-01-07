@@ -77,14 +77,15 @@ export default function GridLayout({childToParent}) {
               // if (techs is empty) {
               //    return true;
               // }
-              // else { Junk below }
-              // const intersection = new Set(
-              //   Array.from(techs).filter(x => projects.has(x))
-              // );
-              
-              // assert.deepEqual(
-              //   Array.from(intersection), techs
-              // );
+              // else {
+                // const intersection = new Set(
+                //   Array.from(techs).filter(x => projects.technologies.has(x))
+                // );
+                
+                // assert.deepEqual(
+                //   Array.from(intersection), techs
+                // );
+              // }
             })
             .map((project, index) => (
                     <div className="card" key={index}>
