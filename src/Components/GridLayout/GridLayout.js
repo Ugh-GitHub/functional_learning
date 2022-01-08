@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-// import { useSearchParams } from 'react-router-dom';
 import './GridLayout';
 import GridItem from '../GridItem/GridItem';
 
@@ -9,19 +8,25 @@ export default function GridLayout({ childToParent, setTechData }) {
           name: "I Have a Project",
           technologies: [
               'React',
-              'Redux'
+              'Redux',
+              'SQL',
+              'Javascript',
           ],
           github: "https://github.com/Ugh-GitHub/i-have-a-project",
-          heroku: "12/05/1995"
+          demoLink: "https://www.youtube.com/watch?v=658-OlkiTCQ&ab_channel=MadTofu22",
+          linkType: "youtube",
         },
         {
           name: "Sign Designer",
           technologies: [
             'React',
-            'Redux'
+            'Redux',
+            'SQL',
+            'Javascript',
         ],
           github: "https://github.com/Ugh-GitHub/sign_designer",
-          heroku: "https://agile-atoll-25766.herokuapp.com/#/home"
+          demoLink: "https://agile-atoll-25766.herokuapp.com/#/login",
+          linkType: "heroku",
         },
         // {
         //   name: "Calculator",
@@ -36,19 +41,25 @@ export default function GridLayout({ childToParent, setTechData }) {
           name: "Feedback Loop",
           technologies: [
             'React',
-            'Redux'
+            'Redux',
+            'SQL',
+            'Javascript',
         ],
           github: "https://github.com/Ugh-GitHub/redux-feedback-looper",
-          heroku: "https://secure-anchorage-94469.herokuapp.com/#/"
+          demoLink: "https://secure-anchorage-94469.herokuapp.com/#/",
+          linkType: "heroku",
         },
         {
           name: "To-Do App",
           technologies: [
               'React',
-              'Redux'
+              'Redux',
+              'SQL',
+              'Javascript',
           ],
           github: "https://github.com/Ugh-GitHub/The-Weekend-sql-to-do-list",
-          heroku: "https://pure-chamber-61508.herokuapp.com/"
+          demoLink: "https://pure-chamber-61508.herokuapp.com/",
+          linkType: "heroku",
         }
       ];
   

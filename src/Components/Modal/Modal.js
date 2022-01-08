@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Modal.css";
 
 function Modal({ setOpenModal, setProjectData }) {
@@ -28,7 +28,7 @@ function Modal({ setOpenModal, setProjectData }) {
           >
             Cancel
           </button>
-          <a href={setProjectData.heroku}>
+          <a href={setProjectData.demoLink}>
               <img src="/images/heroku-logo-solid-purple.png" className="logoIcon" alt="Heroku Logo"/>
           </a>
           <a href={setProjectData.github}>
