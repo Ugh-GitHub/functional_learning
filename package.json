@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@apollo/client": "^3.5.7",
     "@reduxjs/toolkit": "^1.6.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
@@ -12,6 +13,7 @@
     "dotenv": "^12.0.3",
     "google-auth-library": "^7.10.3",
     "googleapis": "^92.0.0",
+    "graphql": "^16.2.0",
     "mdb-react-ui-kit": "^1.6.0",
     "mdb-ui-kit": "^3.10.0",
     "node-forge": "^1.0.0",
