@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import './index.css';
@@ -13,6 +13,7 @@ import Invoice from './Components/InvoiceItem/InvoiceItem';
 import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
+import Github from './Components/Github/Github';
 
 ReactDOM.render(
   <Router>
@@ -20,6 +21,7 @@ ReactDOM.render(
       <Provider store={store}> */}
       <Routes>
         <Route path="/" element={<App />}>
+          <Route path="github" element={<Github/>}/>
           <Route index element={<Home />}/>
           <Route path="interviews" element={<Test />}/>
           <Route path="resume" element={<Resume />} />
