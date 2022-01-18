@@ -23,7 +23,7 @@ import Invoice from './Components/InvoiceItem/InvoiceItem';
 import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
-import Github from './Components/Github/Github';
+import GithubData from './Components/Github/Github';
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
@@ -66,45 +66,48 @@ client
       }
     }`
   })
-  .then(result => console.log('hello', result.data.user.contributionsCollection.contributionCalendar)).catch((e) => { console.log("catch", e) });
+  .then(result => console.log('hello', result.data.user.contributionsCollection.contributionCalendar.weeks))
+  .catch((e) => { console.log("catch", e) });
 
 ReactDOM.render(
-  <Router>
-    {/* <React.StrictMode>
-      <Provider store={store}> */}
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="github" element={<Github/>}/>
-          <Route index element={<Home />}/>
-          <Route path="interviews" element={<Test />}/>
-          <Route path="resume" element={<Resume />} />
-          <Route path="projects" element={<Expenses />} />
-          <Route path="portfolio" element={<Portfolio />}>
-            {/* Default on page load */}
+  <ApolloProvider client={client}>
+    <Router>
+      {/* <React.StrictMode>
+        <Provider store={store}> */}
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="github" element={<GithubData/>}/>
+            <Route index element={<Home />}/>
+            <Route path="interviews" element={<Test />}/>
+            <Route path="resume" element={<Resume />} />
+            <Route path="projects" element={<Expenses />} />
+            <Route path="portfolio" element={<Portfolio />}>
+              {/* Default on page load */}
+              <Route
+                index
+                element={
+                  <main style={{ padding: '1rem' }}>
+                    <p>Select an invoice</p>
+                  </main>
+                }
+              />
+              {/*  */}
+              <Route path=":invoiceId" element={<Invoice />} />
+            </Route>
             <Route
-              index
+              path="*"
               element={
                 <main style={{ padding: '1rem' }}>
-                  <p>Select an invoice</p>
+                  <p>There's nothing here!</p>
                 </main>
               }
             />
-            {/*  */}
-            <Route path=":invoiceId" element={<Invoice />} />
           </Route>
-          <Route
-            path="*"
-            element={
-              <main style={{ padding: '1rem' }}>
-                <p>There's nothing here!</p>
-              </main>
-            }
-          />
-        </Route>
-    </Routes>
-      {/* </Provider>
-    </React.StrictMode> */}
-  </Router>,
+      </Routes>
+        {/* </Provider>
+      </React.StrictMode> */}
+    </Router>
+  </ApolloProvider>,
   document.getElementById('root')
 );
 
