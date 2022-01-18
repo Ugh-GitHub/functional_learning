@@ -6,8 +6,11 @@ import {
   InMemoryCache,
   ApolloProvider,
   useQuery,
+  createHttpLink,
   gql
 } from "@apollo/client";
+import { setContext } from '@apollo/client/link/context';
+import { RestLink } from 'apollo-link-rest';
 import './index.css';
 import App from './Components/App/App';
 // import { store } from './Components/counter/store';
@@ -20,66 +23,89 @@ import Invoice from './Components/InvoiceItem/InvoiceItem';
 import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
-import ExchangeRates from './Components/Github/Github';
+import Github from './Components/Github/Github';
+
+const httpLink = createHttpLink({
+  uri: 'https://api.github.com/graphql',
+});
+
+const authLink = setContext((_, { headers }) => {
+  return {
+    headers: {
+      ...headers,
+      authorization: `Bearer ${process.env.REACT_APP_GITHUB_CONTRIBUTIONS_READ_TOKEN}`,
+    }
+  }
+});
 
 const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache()
 });
 
 client
   .query({
-    query: gql`
-      query GetRates {
-        rates(currency: "USD") {
-          currency
+    query: gql`query {
+      user(login: "ugh-github") {
+        name
+        contributionsCollection {
+          contributionCalendar {
+            colors
+            totalContributions
+            weeks {
+              contributionDays {
+                color
+                contributionCount
+                date
+                weekday
+              }
+              firstDay
+            }
+          }
         }
       }
-    `
+    }`
   })
-  .then(result => console.log(result));
-
+  .then(result => console.log('hello', result.data.user.contributionsCollection.contributionCalendar)).catch((e) => { console.log("catch", e) });
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <Router>
-      {/* <React.StrictMode>
-        <Provider store={store}> */}
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route path="github" element={<ExchangeRates/>}/>
-            <Route index element={<Home />}/>
-            <Route path="interviews" element={<Test />}/>
-            <Route path="resume" element={<Resume />} />
-            <Route path="projects" element={<Expenses />} />
-            <Route path="portfolio" element={<Portfolio />}>
-              {/* Default on page load */}
-              <Route
-                index
-                element={
-                  <main style={{ padding: '1rem' }}>
-                    <p>Select an invoice</p>
-                  </main>
-                }
-              />
-              {/*  */}
-              <Route path=":invoiceId" element={<Invoice />} />
-            </Route>
+  <Router>
+    {/* <React.StrictMode>
+      <Provider store={store}> */}
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route path="github" element={<Github/>}/>
+          <Route index element={<Home />}/>
+          <Route path="interviews" element={<Test />}/>
+          <Route path="resume" element={<Resume />} />
+          <Route path="projects" element={<Expenses />} />
+          <Route path="portfolio" element={<Portfolio />}>
+            {/* Default on page load */}
             <Route
-              path="*"
+              index
               element={
                 <main style={{ padding: '1rem' }}>
-                  <p>There's nothing here!</p>
+                  <p>Select an invoice</p>
                 </main>
               }
             />
+            {/*  */}
+            <Route path=":invoiceId" element={<Invoice />} />
           </Route>
-      </Routes>
-        {/* </Provider>
-      </React.StrictMode> */}
-    </Router>
-  </ApolloProvider>,
-  document.getElementById('root'),
+          <Route
+            path="*"
+            element={
+              <main style={{ padding: '1rem' }}>
+                <p>There's nothing here!</p>
+              </main>
+            }
+          />
+        </Route>
+    </Routes>
+      {/* </Provider>
+    </React.StrictMode> */}
+  </Router>,
+  document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
