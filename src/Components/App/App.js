@@ -32,7 +32,7 @@ export default function App() {
           <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
           <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>
           <MDBNavbarBrand href='/portfolio'>Portfolio</MDBNavbarBrand>
-          <MDBNavbarBrand href='/interviews'>Interview Recordings</MDBNavbarBrand>
+          {/* <MDBNavbarBrand href='/interviews'>Interview Recordings</MDBNavbarBrand> */}
           {/* <MDBNavbarBrand href='/projects'>Current Projects</MDBNavbarBrand> */}
           
           <MDBNavbarToggler

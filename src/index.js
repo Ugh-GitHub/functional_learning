@@ -43,32 +43,6 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-// client
-//   .query({
-//     query: gql`query {
-//       user(login: "ugh-github") {
-//         name
-//         contributionsCollection {
-//           contributionCalendar {
-//             colors
-//             totalContributions
-//             weeks {
-//               contributionDays {
-//                 color
-//                 contributionCount
-//                 date
-//                 weekday
-//               }
-//               firstDay
-//             }
-//           }
-//         }
-//       }
-//     }`
-//   })
-//   .then(result => console.log('hello', result.data.user.contributionsCollection.contributionCalendar.weeks))
-//   .catch((e) => { console.log("catch", e) });
-
 ReactDOM.render(
   <ApolloProvider client={client}>
     <Router>
@@ -76,23 +50,11 @@ ReactDOM.render(
         <Provider store={store}> */}
         <Routes>
           <Route path="/" element={<App />}>
-            {/* <Route path="github" element={<GithubData/>}/> */}
             <Route index element={<Home />}/>
-            <Route path="interviews" element={<Test />}/>
+            {/* <Route path="interviews" element={<Test />}/> */}
             <Route path="resume" element={<Resume />} />
             <Route path="projects" element={<Expenses />} />
             <Route path="portfolio" element={<Portfolio />}>
-              {/* Default on page load */}
-              <Route
-                index
-                element={
-                  <main style={{ padding: '1rem' }}>
-                    <p>Select an invoice</p>
-                  </main>
-                }
-              />
-              {/*  */}
-              <Route path=":invoiceId" element={<Invoice />} />
             </Route>
             <Route
               path="*"
