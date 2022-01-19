@@ -46,7 +46,8 @@ export default function Invoices() {
             }
         }}/>  
         </form> */}
-        {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={project}/>}       
+        {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={project}/>}
+        <p>If looking for projects that utilize specific technologies, you can select the buttons below to filter for related projects</p>       
         <ButtonGrid buttonToggle={buttonToggle}/>
         <GridLayout childToParent={childToParent} setTechData={tech}/>
     </div>
