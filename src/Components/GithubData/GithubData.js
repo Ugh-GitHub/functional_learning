@@ -2,6 +2,8 @@ import {
   useQuery,
   gql
 } from "@apollo/client";
+import './GithubData.css';
+import GithubRow from '../GithubRow/GithubRow';
 
 const GITHUB_DATA = gql`query {
   user(login: "ugh-github") {
@@ -30,13 +32,11 @@ function GithubData() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return (
-    <div>
-      <p>
-        {JSON.stringify(data.user.contributionsCollection.contributionCalendar.weeks)}
-      </p>
+  return data.user.contributionsCollection.contributionCalendar.weeks.map((week) => (
+    <div className="contributionsColumn" key={week.firstDay}>
+      <GithubRow week={week.contributionDays}/>
     </div>
-  );
+  ));
 }
 
 export default GithubData;
@@ -80,3 +80,5 @@ export default GithubData;
 // })();
 
 // export default githubData;
+
+// return data.user.contributionsCollection.contributionCalendar.weeks.map(({})
