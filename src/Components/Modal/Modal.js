@@ -14,11 +14,12 @@ function Modal({ setOpenModal, setProjectData }) {
             X
           </button>
         </div>
+        <img src={setProjectData.imageLink} className="" alt={setProjectData.altTag}></img>
         <div className="title">
           <h1>{setProjectData.name}</h1>
         </div>
         <div className="body">
-          <p>The next page looks amazing. Hope you want to go there!</p>
+          <p>{setProjectData.cardText}</p>
         </div>
         <div className="footer">
           <button id="cancelBtn"
@@ -28,12 +29,20 @@ function Modal({ setOpenModal, setProjectData }) {
           >
             Cancel
           </button>
-          <a href={setProjectData.demoLink}>
-              <img src="/images/heroku-logo-solid-purple.png" className="logoIcon" alt="Heroku Logo"/>
-          </a>
-          <a href={setProjectData.github}>
-            <img src="/images/GitHub-Mark-64px.png" className="logoIcon" alt="GitHub Logo"/>
-          </a>
+          <button
+            onClick={() => {
+              console.log('Clicked',setProjectData.demoLink) ;
+            }}
+          >
+            Demo Site
+          </button>
+          <button
+            onClick={() => {
+              console.log('Clicked',setProjectData.github) ;
+            }}
+          >
+            Github Repo
+          </button>
         </div>
       </div>
     </div>
