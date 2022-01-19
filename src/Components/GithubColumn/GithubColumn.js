@@ -32,9 +32,9 @@ function GithubColumn() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
 
-  return data.user.contributionsCollection.contributionCalendar.weeks.map((week) => (
+  return data.user.contributionsCollection.contributionCalendar.weeks.map((week, index) => (
     <div className="contributionsColumn" key={week.firstDay}>
-      <GithubRow week={week.contributionDays}/>
+      <GithubRow week={week.contributionDays} weekIndex={index}/>
     </div>
   ));
 }
