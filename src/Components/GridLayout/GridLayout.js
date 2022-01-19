@@ -15,8 +15,9 @@ export default function GridLayout({ childToParent, setTechData }) {
           github: "https://github.com/Ugh-GitHub/i-have-a-project",
           demoLink: "https://www.youtube.com/watch?v=658-OlkiTCQ&ab_channel=MadTofu22",
           linkType: "youtube",
-          imageLink: "/images/IHAP_CreateProject.png",
+          imageLink: "/images/IHAP_Availability.png",
           altTag: "I Have a Project Sample Image",
+          cardText: "Prime Academy group project for client",
         },
         {
           name: "Sign Designer",
@@ -31,6 +32,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           linkType: "heroku",
           imageLink: "/images/SignDesigner_Cropped.png",
           altTag: "Sign Designer Sample Image",
+          cardText: "Prime Academy capstone project",
         },
         // {
         //   name: "Calculator",
@@ -54,6 +56,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           linkType: "heroku",
           imageLink: "/images/IHAP_Availability.png",
           altTag: "Feedback Loop Sample Image",
+          cardText: "Feedback Loop app developed at Prime",
         },
         {
           name: "To-Do App",
@@ -68,6 +71,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           linkType: "heroku",
           imageLink: "/images/IHAP_ProjectDetails.png",
           altTag: "To-Do App Sample Image",
+          cardText: "To-Do app developed at Prime",
         }
       ];
   

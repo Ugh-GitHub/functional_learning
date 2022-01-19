@@ -28,6 +28,7 @@ img {
     width: 285px;
     height: 250px;
     object-fit: cover;
+    margin-bottom: 10px;
 }
 
 /* Screen larger than 600px? 2 column */
