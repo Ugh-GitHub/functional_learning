@@ -1,35 +1,12 @@
-import {
-    useQuery,
-    gql
-  } from "@apollo/client";
-import React, { useEffect, useState } from 'react';
+import * as React from 'react';
+import GithubColumn from '../GithubColumn/GithubColumn';
+import './GithubData.css';
 
-const GITHUB_DATA = gql`query {
-    user(login: "ugh-github") {
-      name
-      contributionsCollection {
-        contributionCalendar {
-          colors
-          totalContributions
-          weeks {
-            contributionDays {
-              color
-              contributionCount
-              date
-              weekday
-            }
-            firstDay
-          }
-        }
-      }
-    }
-  }`;
+export default function GithubData() {
 
-function GithubData() {
-    const { loading, error, data } = useQuery(GITHUB_DATA);
-    if (loading) return loading;
-    if (error) return error;
-    return data.user.contributionsCollection.contributionCalendar.weeks;
+  return (
+    <div className='githubComponent'>
+        <GithubColumn/>
+    </div>
+  );
 }
-
-export default GithubData;

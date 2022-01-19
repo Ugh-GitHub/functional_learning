@@ -4,7 +4,6 @@ import {
 } from "@apollo/client";
 import './GithubColumn.css';
 import GithubRow from '../GithubRow/GithubRow';
-import GithubData from '../GithubData/GithubData';
 
 const GITHUB_DATA = gql`query {
   user(login: "ugh-github") {

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import GithubColumn from '../GithubColumn/GithubColumn';
+import GithubData from '../GithubData/GithubData';
 import './Home.css';
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
             You can currently find me learning Typescript and AWS, building a React Native app, improvising on stage, or bouldering.
           </p>
         </div>
-        <GithubColumn/>
+        <GithubData/>
     </div>
   );
 }
