@@ -24,6 +24,12 @@ img {
     height: 280px;
 }
 
+.PortfolioCardImage {
+    width: 285px;
+    height: 250px;
+    object-fit: cover;
+}
+
 /* Screen larger than 600px? 2 column */
 @media (min-width: 550px) {
     .cards { grid-template-columns: repeat(2, 1fr); }
