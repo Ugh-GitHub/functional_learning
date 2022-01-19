@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './GridLayout';
 import GridItem from '../GridItem/GridItem';
 
@@ -29,7 +29,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           github: "https://github.com/Ugh-GitHub/sign_designer",
           demoLink: "https://agile-atoll-25766.herokuapp.com/#/login",
           linkType: "heroku",
-          imageLink: "/images/SignDesigner.png",
+          imageLink: "/images/SignDesigner_Cropped.png",
           altTag: "Sign Designer Sample Image",
         },
         // {
