@@ -23,7 +23,7 @@ import Invoice from './Components/InvoiceItem/InvoiceItem';
 import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
-// import GithubColumn from './Components/GithubColumn/GithubColumn';
+// import GithubData from './Components/GithubData/GithubData';
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
