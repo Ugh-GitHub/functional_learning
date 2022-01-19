@@ -4,7 +4,7 @@ import Tooltip from '../ToolTip/ToolTip';
 
 export default function GithubRow({week}) {
     return week.map((day) => (
-        <Tooltip text={`date: ${day.date}, contributions: ${day.contributionCount}`}>
+        <Tooltip text={`${day.contributionCount} contributions on ${day.date}`}>
             <div key={day.date} className={`contributionBox ${day.color}`} style={{backgroundColor: `${day.color}`}}>
             </div>
         </Tooltip>

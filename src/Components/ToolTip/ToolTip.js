@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './ToolTip.css';
 
 const Tooltip = ({ children, text, ...rest }) => {
-    const [show, setShow] = React.useState(false);
+    const [show, setShow] = useState(false);
   
     return (
       <div className="tooltip-container">
