@@ -2,7 +2,7 @@ import {
   useQuery,
   gql
 } from "@apollo/client";
-import './GithubData.css';
+import './GithubColumn.css';
 import GithubRow from '../GithubRow/GithubRow';
 
 const GITHUB_DATA = gql`query {
@@ -26,7 +26,7 @@ const GITHUB_DATA = gql`query {
   }
 }`;
 
-function GithubData() {
+function GithubColumn() {
   const { loading, error, data } = useQuery(GITHUB_DATA);
 
   if (loading) return <p>Loading...</p>;
@@ -39,7 +39,7 @@ function GithubData() {
   ));
 }
 
-export default GithubData;
+export default GithubColumn;
 
 // async function getContributions(token, username) {
 //   const headers = {

@@ -1,5 +1,6 @@
 .contributionsColumn {
     display: inline-block;
+    vertical-align: text-top;
 }
 
 

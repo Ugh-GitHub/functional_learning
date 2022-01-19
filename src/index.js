@@ -23,7 +23,7 @@ import Invoice from './Components/InvoiceItem/InvoiceItem';
 import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
-import GithubData from './Components/GithubData/GithubData';
+// import GithubColumn from './Components/GithubColumn/GithubColumn';
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
@@ -43,31 +43,31 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-client
-  .query({
-    query: gql`query {
-      user(login: "ugh-github") {
-        name
-        contributionsCollection {
-          contributionCalendar {
-            colors
-            totalContributions
-            weeks {
-              contributionDays {
-                color
-                contributionCount
-                date
-                weekday
-              }
-              firstDay
-            }
-          }
-        }
-      }
-    }`
-  })
-  .then(result => console.log('hello', result.data.user.contributionsCollection.contributionCalendar.weeks))
-  .catch((e) => { console.log("catch", e) });
+// client
+//   .query({
+//     query: gql`query {
+//       user(login: "ugh-github") {
+//         name
+//         contributionsCollection {
+//           contributionCalendar {
+//             colors
+//             totalContributions
+//             weeks {
+//               contributionDays {
+//                 color
+//                 contributionCount
+//                 date
+//                 weekday
+//               }
+//               firstDay
+//             }
+//           }
+//         }
+//       }
+//     }`
+//   })
+//   .then(result => console.log('hello', result.data.user.contributionsCollection.contributionCalendar.weeks))
+//   .catch((e) => { console.log("catch", e) });
 
 ReactDOM.render(
   <ApolloProvider client={client}>
@@ -76,7 +76,7 @@ ReactDOM.render(
         <Provider store={store}> */}
         <Routes>
           <Route path="/" element={<App />}>
-            <Route path="github" element={<GithubData/>}/>
+            {/* <Route path="github" element={<GithubData/>}/> */}
             <Route index element={<Home />}/>
             <Route path="interviews" element={<Test />}/>
             <Route path="resume" element={<Resume />} />

@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import * as React from 'react';
+import GithubColumn from '../GithubColumn/GithubColumn';
 import './Home.css';
-
 
 export default function Home() {
 
@@ -14,10 +14,8 @@ export default function Home() {
             Currently pivoting into a software engineering role where I can leverage my aptitude for learning, problem solving and communication. 
             You can currently find me learning Typescript and AWS, building a React Native app, improvising on stage, or bouldering.
           </p>
-
-          
-          
         </div>
+        <GithubColumn/>
     </div>
   );
 }

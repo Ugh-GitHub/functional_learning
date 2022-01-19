@@ -8,6 +8,9 @@
     height: 15px;
     margin: 2px;
 }
-.ebedf0 {
-    background-color: #ebedf0;
+#hover-content {
+    display:none;
+}
+#parent:hover #hover-content {
+    display:block;
 }
