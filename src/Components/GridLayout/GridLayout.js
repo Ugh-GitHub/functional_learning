@@ -15,6 +15,8 @@ export default function GridLayout({ childToParent, setTechData }) {
           github: "https://github.com/Ugh-GitHub/i-have-a-project",
           demoLink: "https://www.youtube.com/watch?v=658-OlkiTCQ&ab_channel=MadTofu22",
           linkType: "youtube",
+          imageLink: "/images/IHAP_CreateProject.png",
+          altTag: "I Have a Project Sample Image",
         },
         {
           name: "Sign Designer",
@@ -27,6 +29,8 @@ export default function GridLayout({ childToParent, setTechData }) {
           github: "https://github.com/Ugh-GitHub/sign_designer",
           demoLink: "https://agile-atoll-25766.herokuapp.com/#/login",
           linkType: "heroku",
+          imageLink: "/images/SignDesigner.png",
+          altTag: "Sign Designer Sample Image",
         },
         // {
         //   name: "Calculator",
@@ -48,6 +52,8 @@ export default function GridLayout({ childToParent, setTechData }) {
           github: "https://github.com/Ugh-GitHub/redux-feedback-looper",
           demoLink: "https://secure-anchorage-94469.herokuapp.com/#/",
           linkType: "heroku",
+          imageLink: "/images/IHAP_Availability.png",
+          altTag: "Feedback Loop Sample Image",
         },
         {
           name: "To-Do App",
@@ -60,6 +66,8 @@ export default function GridLayout({ childToParent, setTechData }) {
           github: "https://github.com/Ugh-GitHub/The-Weekend-sql-to-do-list",
           demoLink: "https://pure-chamber-61508.herokuapp.com/",
           linkType: "heroku",
+          imageLink: "/images/IHAP_ProjectDetails.png",
+          altTag: "To-Do App Sample Image",
         }
       ];
   
