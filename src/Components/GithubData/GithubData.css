@@ -1,13 +1,19 @@
 .githubComponent {
-    position: absolute;
-    margin-top: 50px;
+    position: relative center;
+    margin-top: 25px;
     width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 .footnote {
     /* color:darkgray; */
     font-size: small;
     margin-top: 4px;
-    margin-right: 120px;
+    margin-left: 40px;
     text-align: right;
+    position: absolute;
 }
