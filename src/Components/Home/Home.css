@@ -6,7 +6,7 @@
     margin-right: 50px;
 }
 
-@media (max-width: 930px) {
+@media (max-width: 1000px) {
     .sectionDivides {
         width: 500px;
         margin: 0 auto;
@@ -36,11 +36,12 @@
         line-height: 1.2;
         padding-top: 30px;
         padding-right: 50px;
+        position: absolute;
     }
     
 }
 
-@media (min-width: 930px) {
+/* @media (min-width: 1000px) {
     .headshot {
         float: right;
     }
@@ -55,7 +56,6 @@
         width: 500px;
         padding: 25px;
         display: flex;
-        
     }
     
     .homeFormat {
@@ -63,9 +63,10 @@
         padding-left: 50px;
         padding-top: 30px;
         padding-right: 50px;
+        position: absolute;
     }
     
-}
+} */
 
 @media (min-width: 1000px) {
     .sectionDivides {
@@ -74,6 +75,7 @@
     }
     .headshot {
         float: right;
+        position: right;
     }
     
     .aboutHeader {
@@ -94,6 +96,7 @@
         padding-left: 50px;
         padding-top: 30px;
         padding-right: 50px;
+        position: absolute;
     }
     
 }
