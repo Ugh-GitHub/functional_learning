@@ -5,12 +5,9 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  useQuery,
   createHttpLink,
-  gql
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
-import { RestLink } from 'apollo-link-rest';
 import './index.css';
 import App from './Components/App/App';
 // import { store } from './Components/counter/store';
@@ -19,8 +16,8 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'; 
 import Expenses from './Components/Expenses/Expenses';
 import Portfolio from './Components/Portfolio/Portfolio';
-import Invoice from './Components/InvoiceItem/InvoiceItem';
-import Test from './Components/VideoInterview/VideoInterview';
+// import Invoice from './Components/InvoiceItem/InvoiceItem';
+// import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
 // import GithubData from './Components/GithubData/GithubData';
