@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import GithubColumn from '../GithubColumn/GithubColumn';
 import './GithubData.css';
 
 export default function GithubData() {
-  const [contributionTotal, setContributionTotal] = useState('');
 
   return (
     <div className='githubComponent'>
