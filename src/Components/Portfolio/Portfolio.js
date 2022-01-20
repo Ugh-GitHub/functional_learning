@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from 'react';
-// import {
-//   useSearchParams,
-// } from 'react-router-dom';
 import GridLayout from '../GridLayout/GridLayout';
 import './Portfolio.css';
 import ButtonGrid from '../ButtonGrid/ButtonGrid';
 import Modal from '../Modal/Modal';
 
 export default function Invoices() {
-  // let [searchParams, setSearchParams] = useSearchParams({ replace: true });
   const [modalOpen, setModalOpen] = useState(false);
   const [project, setProject] = useState('');
   const [tech, setTech] = useState([]);
 
   const childToParent = (data) => {
-    // alert("this is an alert");
     setProject(data);
     setModalOpen(true);
   }
@@ -28,12 +23,10 @@ export default function Invoices() {
     } 
   }
 
-  
-
   return (
-    <div className={setModalOpen ? "scrollLock" : ""}>
+    <div>
         {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={project}/>}
-        <p>If looking for projects that utilize specific technologies, you can select the buttons below to filter for related projects</p>       
+        <p className='buttonGridInstructions'>A small selection of my previous work. If you're looking for projects that utilize specific technologies, you can select the buttons below to filter for related projects.</p>       
         <ButtonGrid buttonToggle={buttonToggle}/>
         <GridLayout childToParent={childToParent} setTechData={tech}/>
     </div>

@@ -1,6 +1,10 @@
 * {
     box-sizing: border-box;
 }
+.buttonGridInstructions {
+    text-align: center;
+    margin-top: 80px;
+}
 
 .d-flex {
     padding: 30px;
