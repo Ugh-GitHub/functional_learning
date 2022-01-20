@@ -28,28 +28,30 @@ export default function App() {
 
   return (
     <div>
-      <MDBNavbar expand='lg' light bgColor='light' className='fixed-top'>
-        <MDBContainer fluid>
-          <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
-          <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>
-          <MDBNavbarBrand href='/portfolio'>Portfolio</MDBNavbarBrand>
-          {/* <MDBNavbarBrand href='/interviews'>Interview Recordings</MDBNavbarBrand> */}
-          {/* <MDBNavbarBrand href='/projects'>Current Projects</MDBNavbarBrand> */}
-          
-          <MDBNavbarToggler
-            aria-controls='navbarSupportedContent'
-            aria-expanded='false'
-            aria-label='Toggle navigation'
-            onClick={() => setShowBasic(!showBasic)}
-          >
-            <MDBIcon icon='bars' fas />
-          </MDBNavbarToggler>
+      <div class="page-wrap">
+        <MDBNavbar expand='lg' light bgColor='light' className='fixed-top'>
+          <MDBContainer fluid>
+            <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
+            <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>
+            <MDBNavbarBrand href='/portfolio'>Portfolio</MDBNavbarBrand>
+            {/* <MDBNavbarBrand href='/interviews'>Interview Recordings</MDBNavbarBrand> */}
+            {/* <MDBNavbarBrand href='/projects'>Current Projects</MDBNavbarBrand> */}
+            
+            <MDBNavbarToggler
+              aria-controls='navbarSupportedContent'
+              aria-expanded='false'
+              aria-label='Toggle navigation'
+              onClick={() => setShowBasic(!showBasic)}
+            >
+              <MDBIcon icon='bars' fas />
+            </MDBNavbarToggler>
 
-          
-        </MDBContainer>
-      </MDBNavbar>
-      <Outlet/>
-      
+            
+          </MDBContainer>
+        </MDBNavbar>
+        <Outlet/>
+      </div>
+      <footer class="site-footer">&#169; Peter Pierce, 2022</footer>
     </div>
   );
 }
