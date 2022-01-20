@@ -19,6 +19,7 @@ import {
   MDBCollapse
 } from 'mdb-react-ui-kit';
 import { useState } from 'react';
+import './App.css';
 
 
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
 
   return (
     <div>
-      <MDBNavbar expand='lg' light bgColor='light'>
+      <MDBNavbar expand='lg' light bgColor='light' className='fixed-top'>
         <MDBContainer fluid>
           <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
           <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>
@@ -47,7 +48,7 @@ export default function App() {
           
         </MDBContainer>
       </MDBNavbar>
-      <Outlet />
+      <Outlet/>
       
     </div>
   );

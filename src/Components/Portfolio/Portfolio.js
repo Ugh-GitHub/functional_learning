@@ -28,24 +28,10 @@ export default function Invoices() {
     } 
   }
 
-  useEffect(() => {
-    console.log('use effect ran in Portfolio');
-    console.log(tech);
-  });
+  
 
   return (
-    <div >
-        {/* <form className='d-flex input-group w-auto'>
-            <input type='search' className='form-control' placeholder='Search by Project Title' aria-label='Search' value={searchParams.get('term') || ''}
-        onChange={(event) => {
-            let term = event.target.value;
-            if (term) {
-            setSearchParams({ term }, { replace: true });
-            } else {
-            setSearchParams({}, { replace: true });
-            }
-        }}/>  
-        </form> */}
+    <div className={setModalOpen ? "scrollLock" : ""}>
         {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={project}/>}
         <p>If looking for projects that utilize specific technologies, you can select the buttons below to filter for related projects</p>       
         <ButtonGrid buttonToggle={buttonToggle}/>

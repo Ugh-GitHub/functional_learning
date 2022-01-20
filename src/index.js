@@ -10,17 +10,11 @@ import {
 import { setContext } from '@apollo/client/link/context';
 import './index.css';
 import App from './Components/App/App';
-// import { store } from './Components/counter/store';
-// import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom'; 
-import Expenses from './Components/Expenses/Expenses';
 import Portfolio from './Components/Portfolio/Portfolio';
-// import Invoice from './Components/InvoiceItem/InvoiceItem';
-// import Test from './Components/VideoInterview/VideoInterview';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
-// import GithubData from './Components/GithubData/GithubData';
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',
@@ -50,9 +44,7 @@ ReactDOM.render(
             <Route index element={<Home />}/>
             {/* <Route path="interviews" element={<Test />}/> */}
             <Route path="resume" element={<Resume />} />
-            <Route path="projects" element={<Expenses />} />
-            <Route path="portfolio" element={<Portfolio />}>
-            </Route>
+            <Route path="portfolio" element={<Portfolio />} />
             <Route
               path="*"
               element={
