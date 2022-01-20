@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import './ToolTip.css';
 
-const Tooltip = ({ toolTipType, children, text, ...rest }) => {
+const TooltipRight = ({ toolTipType, children, text, ...rest }) => {
     const [show, setShow] = useState(false);
   
     return (
       <div className="tooltip-container">
-        <div className={show ? 'tooltip-box visible' : 'tooltip-box'}>
+        <div className={show ? 'tooltip-right-box visible' : 'tooltip-right-box'}>
           {text}
-          <span className="tooltip-arrow" />
+          <span className="tooltip-arrow-right" />
         </div>
         <div
           onMouseEnter={() => setShow(true)}
@@ -21,4 +21,4 @@ const Tooltip = ({ toolTipType, children, text, ...rest }) => {
     );
   };
 
-  export default Tooltip;
+  export default TooltipRight;
