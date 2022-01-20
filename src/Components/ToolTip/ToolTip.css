@@ -12,6 +12,7 @@
   display: none;
   z-index: 5;
   white-space: nowrap;
+  font-size: x-small;
 }
 
 .tooltip-box.visible {
@@ -45,12 +46,13 @@
   display: none;
   z-index: 5;
   white-space: nowrap;
+  font-size: x-small;
 }
 
 .tooltip-arrow-right {
   position: absolute;
   top: -10px;
-  left: 94%;
+  left: 90%;
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent rgba(0, 0, 0, 0.7) transparent;
