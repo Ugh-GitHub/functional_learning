@@ -54,7 +54,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           github: "https://github.com/Ugh-GitHub/redux-feedback-looper",
           demoLink: "https://secure-anchorage-94469.herokuapp.com/#/",
           linkType: "heroku",
-          imageLink: "/images/IHAP_Availability.png",
+          imageLink: "/images/FeedbackLooper.png",
           altTag: "Feedback Loop Sample Image",
           cardText: "Feedback Loop app developed at Prime",
         },
@@ -69,7 +69,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           github: "https://github.com/Ugh-GitHub/The-Weekend-sql-to-do-list",
           demoLink: "https://pure-chamber-61508.herokuapp.com/",
           linkType: "heroku",
-          imageLink: "/images/IHAP_ProjectDetails.png",
+          imageLink: "/images/ToDoList.png",
           altTag: "To-Do App Sample Image",
           cardText: "To-Do app developed at Prime",
         }

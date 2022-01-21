@@ -23,10 +23,10 @@ function Modal({ setOpenModal, setProjectData }) {
             <button id="cancelBtn" onClick={() => {setOpenModal(false);}}>
               Cancel
             </button>
-            <button onClick={() => {console.log('Clicked',setProjectData.demoLink)}}>
+            <button onClick={() => {window.location.href=setProjectData.demoLink}}>
               Demo Site
             </button>
-            <button onClick={() => {console.log('Clicked',setProjectData.github)}}>
+            <button onClick={() => {window.location.href=setProjectData.github}}>
               Github Repo
             </button>
           </div>
