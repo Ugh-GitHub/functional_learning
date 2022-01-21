@@ -12,7 +12,7 @@ function Modal({ setOpenModal, setProjectData }) {
     <div>
       <div className="modalBackground">
         <div className="modalContainer">
-          <img src={setProjectData.imageLink} className="" alt={setProjectData.altTag}></img>
+          <img src={setProjectData.modalImageLink} className="" alt={setProjectData.altTag}></img>
           <div className="title">
             <h1>{setProjectData.name}</h1>
           </div>
