@@ -1,7 +1,3 @@
-import {
-  useQuery,
-  gql
-} from "@apollo/client";
 import './GithubColumn.css';
 import GithubRow from '../GithubRow/GithubRow';
 
