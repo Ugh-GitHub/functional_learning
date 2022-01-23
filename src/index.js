@@ -6,6 +6,7 @@ import {
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
+  gql
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 import './index.css';
@@ -33,6 +34,31 @@ const client = new ApolloClient({
   link: authLink.concat(httpLink),
   cache: new InMemoryCache()
 });
+
+client
+  .query({
+    query: gql`query {
+      user(login: "ugh-github") {
+        name
+        contributionsCollection {
+          contributionCalendar {
+            colors
+            totalContributions
+            weeks {
+              contributionDays {
+                color
+                contributionCount
+                date
+                weekday
+              }
+              firstDay
+            }
+          }
+        }
+      }
+    }`
+  })
+  .then(result => console.log(result));
 
 ReactDOM.render(
   <ApolloProvider client={client}>

@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { Outlet } from 'react-router-dom';
-// import { Outlet, useNavigate } from 'react-router-dom';
 import {
   MDBContainer,
   MDBNavbar,
@@ -13,35 +12,31 @@ import './App.css';
 
 
 export default function App() {
-  // let navigate = useNavigate();
   const [showBasic, setShowBasic] = useState(false);
+  const currentYear = new Date().getFullYear();
 
   return (
     <div>
-      <div class="page-wrap">
+      <div className="page-wrap">
         <MDBNavbar expand='lg' light bgColor='light' className='fixed-top'>
           <MDBContainer fluid>
             <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
             <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>
             <MDBNavbarBrand href='/portfolio'>Portfolio</MDBNavbarBrand>
             {/* <MDBNavbarBrand href='/interviews'>Interview Recordings</MDBNavbarBrand> */}
-            {/* <MDBNavbarBrand href='/projects'>Current Projects</MDBNavbarBrand> */}
-            
             <MDBNavbarToggler
               aria-controls='navbarSupportedContent'
               aria-expanded='false'
               aria-label='Toggle navigation'
               onClick={() => setShowBasic(!showBasic)}
             >
-              <MDBIcon icon='bars' fas />
+              <MDBIcon icon='bars' />
             </MDBNavbarToggler>
-
-            
           </MDBContainer>
         </MDBNavbar>
         <Outlet/>
       </div>
-      <footer class="site-footer">&#169; Peter Pierce, 2022</footer>
+      <footer className="site-footer">&#169; Peter Pierce, {currentYear}</footer>
     </div>
   );
 }
