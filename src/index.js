@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
 import 'mdb-react-ui-kit/dist/css/mdb.min.css';
 import {
@@ -15,6 +15,7 @@ import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
+
 
 const httpLink = createHttpLink({
   uri: 'https://api.github.com/graphql',

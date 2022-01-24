@@ -5,12 +5,12 @@ import './ButtonGrid.css';
 export default function ButtonGrid({buttonToggle}) {
     const [technologies, setTechnologies] = useState([{
         name: 'React', 
-        type: 'technology',
+        type: 'library',
         toggle: ''
     }, 
     {
         name: 'Redux', 
-        type: 'technology',
+        type: 'library',
         toggle: ''
     },
     {
@@ -32,7 +32,28 @@ export default function ButtonGrid({buttonToggle}) {
         name: 'Typescript',
         type: 'language',
         toggle: ''
-    },]);
+    },
+    {
+        name: 'jQuery',
+        type: 'library',
+        toggle: ''
+    },
+    {
+        name: 'Node.js',
+        type: 'library',
+        toggle: ''
+    },
+    {
+        name: 'Express.js',
+        type: 'library',
+        toggle: ''
+    },
+    {
+        name: 'PostgreSQL',
+        type: 'database',
+        toggle: ''
+    },
+]);
 
     function selectToggle(technology) {
         var index = technologies.map(function(e) { return e.name; }).indexOf(technology.name);
