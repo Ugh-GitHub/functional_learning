@@ -26,6 +26,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           imageLink: "/images/IHAP_Availability.png",
           altTag: "I Have a Project Sample Image",
           cardText: "Prime Academy group project for client",
+          modalText: "Here's some placeholder modal text",
           modalImageLink: "/images/IHAP_Availability.png",
         },
         {
@@ -49,6 +50,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           imageLink: "/images/SignDesigner_Cropped.png",
           altTag: "Sign Designer Sample Image",
           cardText: "Prime Academy capstone project",
+          modalText: "Here's some placeholder modal text",
           modalImageLink: "/images/SignDesigner_Cropped.png",
         },
         // {
@@ -80,6 +82,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           imageLink: "/images/FeedbackLooper.png",
           altTag: "Feedback Loop Sample Image",
           cardText: "Feedback Loop app developed at Prime",
+          modalText: "Here's some placeholder modal text",
           modalImageLink: "/images/FeedbackLooper_Wide.png",
         },
         {
@@ -100,6 +103,7 @@ export default function GridLayout({ childToParent, setTechData }) {
           imageLink: "/images/ToDoList.png",
           altTag: "To-Do App Sample Image",
           cardText: "To-Do app developed at Prime",
+          modalText: "Here's some placeholder modal text",
           modalImageLink: "/images/ToDoList.png",
         }
       ];
