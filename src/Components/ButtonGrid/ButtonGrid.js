@@ -3,57 +3,85 @@ import React, { useState } from 'react';
 import './ButtonGrid.css';
 
 export default function ButtonGrid({buttonToggle}) {
-    const [technologies, setTechnologies] = useState([{
-        name: 'React', 
-        type: 'library',
-        toggle: ''
-    }, 
-    {
-        name: 'Redux', 
-        type: 'library',
-        toggle: ''
-    },
-    {
-        name: 'SQL',
-        type: 'language',
-        toggle: ''
-    },
-    {
-        name: 'Javascript',
-        type: 'language',
-        toggle: ''
-    },
-    {
-        name: 'HTML',
-        type: 'language',
-        toggle: ''
-    },
-    {
-        name: 'Typescript',
-        type: 'language',
-        toggle: ''
-    },
-    {
-        name: 'jQuery',
-        type: 'library',
-        toggle: ''
-    },
-    {
-        name: 'Node.js',
-        type: 'library',
-        toggle: ''
-    },
-    {
-        name: 'Express.js',
-        type: 'library',
-        toggle: ''
-    },
-    {
-        name: 'PostgreSQL',
-        type: 'database',
-        toggle: ''
-    },
-]);
+    const [technologies, setTechnologies] = useState(
+        [
+            {
+                name: 'Javascript',
+                type: 'language',
+                toggle: ''
+            },
+            {
+                name: 'SQL',
+                type: 'language',
+                toggle: ''
+            },
+            {
+                name: 'HTML',
+                type: 'language',
+                toggle: ''
+            },
+            {
+                name: 'CSS',
+                type: 'language',
+                toggle: ''
+            },
+            {
+                name: 'React', 
+                type: 'library',
+                toggle: ''
+            }, 
+            {
+                name: 'Redux', 
+                type: 'library',
+                toggle: ''
+            },
+            // {
+            //     name: 'Typescript',
+            //     type: 'language',
+            //     toggle: ''
+            // },
+            {
+                name: 'jQuery',
+                type: 'library',
+                toggle: ''
+            },
+            {
+                name: 'Node.js',
+                type: 'library',
+                toggle: ''
+            },
+            {
+                name: 'Express.js',
+                type: 'library',
+                toggle: ''
+            },
+            {
+                name: 'PostgreSQL',
+                type: 'database',
+                toggle: ''
+            },
+            {
+                name: 'AJAX',
+                type: 'API',
+                toggle: ''
+            },
+            {
+                name: 'Material-UI',
+                type: 'library',
+                toggle: ''
+            },
+            {
+                name: 'React Router',
+                type: 'library',
+                toggle: ''
+            },
+            {
+                name: 'Passport',
+                type: 'Middleware',
+                toggle: ''
+            },
+        ]
+    );
 
     function selectToggle(technology) {
         var index = technologies.map(function(e) { return e.name; }).indexOf(technology.name);
@@ -75,11 +103,11 @@ export default function ButtonGrid({buttonToggle}) {
         <div className="buttonGrid">
             {technologies
             .map((technology, index) => (
-                    <div key={index}>
-                        <div>
-                            <button className={technology.toggle} onClick={() => someFunction(technology)}>{technology.name}</button>
-                        </div>
-                    </div>
+                <div key={index}>
+                    
+                    <button className={technology.toggle} onClick={() => someFunction(technology)}>{technology.name}</button>
+                    
+                </div>
             ))}
         </div>
 
