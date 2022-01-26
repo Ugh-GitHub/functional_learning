@@ -16,6 +16,8 @@ export default function GridLayout({ childToParent, setTechData }) {
               'PostgreSQL',
               'Passport',
               'CSS',
+              'React Router',
+              'Material-UI'
           ],
           github: "https://github.com/Ugh-GitHub/i-have-a-project",
           demoLink: "https://www.youtube.com/watch?v=658-OlkiTCQ&ab_channel=MadTofu22",
@@ -87,6 +89,7 @@ export default function GridLayout({ childToParent, setTechData }) {
               'HTML',
               'Javascript',
               'AJAX',
+              'SQL',
           ],
           github: "https://github.com/Ugh-GitHub/The-Weekend-sql-to-do-list",
           demoLink: "https://pure-chamber-61508.herokuapp.com/",

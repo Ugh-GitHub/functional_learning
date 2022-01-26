@@ -103,9 +103,15 @@ export default function ButtonGrid({buttonToggle}) {
         <div className="buttonGrid">
             {technologies
             .map((technology, index) => (
-                <div key={index}>
-                    
-                    <button className={technology.toggle} onClick={() => someFunction(technology)}>{technology.name}</button>
+                <div> 
+                    {(index % 8 === 7) ?
+                        <div className="buttonNewLine">
+                            <button key={index} className={technology.toggle} onClick={() => someFunction(technology)}>{technology.name}</button>
+                        </div>
+                        
+                    :
+                        <button key={index} className={technology.toggle} onClick={() => someFunction(technology)}>{technology.name}</button>
+                    }
                     
                 </div>
             ))}
