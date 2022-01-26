@@ -22,3 +22,9 @@
     margin-top: 50px;
     font-size: small;
   }
+
+  .footerIcon {
+    margin-top: 3px;
+    margin-right: 3px;
+    height: 35px;
+}

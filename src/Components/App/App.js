@@ -36,7 +36,12 @@ export default function App() {
         </MDBNavbar>
         <Outlet/>
       </div>
-      <footer className="site-footer">&#169; Peter Pierce, {currentYear}</footer>
+      <footer className="site-footer">Site built using React v17, Material Design Bootstrap, and Apollo Client<br/>&#169; Peter Pierce, {currentYear}<br/><a href="https://www.linkedin.com/in/peter-p-2b757737">
+          <img src="/images/LI-In-Bug.png" className="footerIcon" alt="Linkedin Logo"></img>
+        </a>
+        <a href="https://github.com/Ugh-GitHub">
+          <img src="/images/GitHub-Mark-64px.png" className="footerIcon" alt="GitHub Logo"></img>
+        </a></footer>
     </div>
   );
 }
