@@ -96,6 +96,7 @@ export default function GridLayout({ childToParent, setTechData }) {
               'Javascript',
               'AJAX',
               'SQL',
+              'CSS',
           ],
           github: "https://github.com/Ugh-GitHub/The-Weekend-sql-to-do-list",
           demoLink: "https://pure-chamber-61508.herokuapp.com/",
