@@ -9,10 +9,10 @@ export default function Resume() {
                 <span>Peter Pierce <br/></span>
                 <span>(952) 491 - 0151 <br/></span>
                 <a href="https://www.linkedin.com/in/peter-p-2b757737">
-                    <img src="/images/LI-In-Bug.png" className="logoIcon" alt="Linkedin Logo"></img>
+                    <img src="https://s3.us-east-2.amazonaws.com/portfolio.site.images/LI-In-Bug.png" className="logoIcon" alt="Linkedin Logo"></img>
                 </a>
                 <a href="https://github.com/Ugh-GitHub">
-                    <img src="/images/GitHub-Mark-64px.png" className="logoIcon" alt="GitHub Logo"></img>
+                    <img src="https://s3.us-east-2.amazonaws.com/portfolio.site.images/GitHub-Mark-64px.png" className="logoIcon" alt="GitHub Logo"></img>
                 </a>
             </div>
             

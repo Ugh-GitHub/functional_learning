@@ -37,7 +37,7 @@ export default function GithubData() {
   return (
     <div className='githubComponent'>
       <a href="https://github.com/Ugh-GitHub" style={{color:'black'}} title="Click to visit my Github Profile">
-        <h3><img src="/images/GitHub-Mark-64px.png" className="githubIcon" alt="GitHub Logo"></img>&nbsp;&nbsp;Github Contributions (YTD Total: {data.user.contributionsCollection.contributionCalendar.totalContributions})</h3>
+        <h3><img src="https://s3.us-east-2.amazonaws.com/portfolio.site.images/GitHub-Mark-64px.png" className="githubIcon" alt="GitHub Logo"></img>&nbsp;&nbsp;Github Contributions (YTD Total: {data.user.contributionsCollection.contributionCalendar.totalContributions})</h3>
       </a>
         <GithubColumn githubData={data}/>
         <p className="footnote">Hover for specfic commit information.&nbsp;
