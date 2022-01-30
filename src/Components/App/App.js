@@ -14,11 +14,12 @@ import './App.css';
 export default function App() {
   const [showBasic, setShowBasic] = useState(false);
   const currentYear = new Date().getFullYear();
+  var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
 
   return (
     <div>
       <div className="page-wrap">
-        <MDBNavbar expand='lg' light bgColor='light' className='fixed-top'>
+        <MDBNavbar expand='lg' light bgColor='light' className='fixed-top' content="width=device-width">
           <MDBContainer fluid>
             <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
             <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>

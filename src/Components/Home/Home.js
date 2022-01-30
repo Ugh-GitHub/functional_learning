@@ -4,6 +4,8 @@ import './Home.css';
 
 export default function Home() {
 
+  
+
   return (
     <div className="homeFormat">
         <div className="sectionDivides">

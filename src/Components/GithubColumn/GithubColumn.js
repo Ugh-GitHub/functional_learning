@@ -22,23 +22,32 @@ import GithubRow from '../GithubRow/GithubRow';
 //   }
 // }`;
 
-function GithubColumn({githubData}) {
+function GithubColumn({githubData, isMobile, mobileWeekTotal}) {
 
-  // const { loading, error, data } = useQuery(GITHUB_DATA);
+  
 
-  // if (loading) return <p>Loading...</p>;
-  // if (error) return <p>Error :(</p>;
-
-
-  return (
-      <div>
-          {githubData.user.contributionsCollection.contributionCalendar.weeks.map((week, index) => (
-            <div className="contributionsColumn" key={week.firstDay}>
-              <GithubRow week={week.contributionDays} weekIndex={index}/>
-            </div>))
-          }
+  if ( isMobile ) {
+    return (
+      <div >
+        {githubData.user.contributionsCollection.contributionCalendar.weeks.slice(52 - mobileWeekTotal,52).map((week, index) => (
+          <div className="contributionsColumn" key={week.firstDay}>
+            <GithubRow week={week.contributionDays} weekIndex={index}/>
+          </div>))
+        }
       </div>
-  );
+    );
+  }
+  else {
+    return (
+      <div>
+        {githubData.user.contributionsCollection.contributionCalendar.weeks.map((week, index) => (
+          <div className="contributionsColumn" key={week.firstDay}>
+            <GithubRow week={week.contributionDays} weekIndex={index}/>
+          </div>))
+        }
+      </div>
+    );
+  }
 }
 
 export default GithubColumn;
