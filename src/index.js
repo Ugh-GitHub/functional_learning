@@ -36,32 +36,31 @@ const client = new ApolloClient({
   cache: new InMemoryCache()
 });
 
-
-client
-  .query({
-    query: gql`query {
-      user(login: "ugh-github") {
-        name
-        contributionsCollection {
-          contributionCalendar {
-            colors
-            totalContributions
-            weeks {
-              contributionDays {
-                color
-                contributionCount
-                date
-                weekday
-              }
-              firstDay
-            }
-          }
-        }
-      }
-    }`
-  })
-  .then(result => console.log(result))
-  .catch(error => console.log(error));
+// client
+//   .query({
+//     query: gql`query {
+//       user(login: "ugh-github") {
+//         name
+//         contributionsCollection {
+//           contributionCalendar {
+//             colors
+//             totalContributions
+//             weeks {
+//               contributionDays {
+//                 color
+//                 contributionCount
+//                 date
+//                 weekday
+//               }
+//               firstDay
+//             }
+//           }
+//         }
+//       }
+//     }`
+//   })
+//   .then(result => console.log(result))
+//   .catch(error => console.log(error));
 
 ReactDOM.render(
   <ApolloProvider client={client}>
