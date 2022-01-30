@@ -3,18 +3,21 @@
     height: 250px;
     object-fit: cover;
     border-radius: 80%;
-    margin-right: 50px;
+    /* margin-right: 50px; */
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 425px) and (orientation: portrait) {
     .sectionDivides {
-        width: 100%;
+        /* width: 100%; */
         margin: 0 auto;
         text-align: center;
+        
     }
 
     .headshot {
-        display: block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0 auto;
         margin-bottom: 25px;
     }
