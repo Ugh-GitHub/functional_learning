@@ -19,7 +19,7 @@ export default function App() {
   return (
     <div>
       <div className="page-wrap">
-        <MDBNavbar expand='lg' light bgColor='light' className='fixed-top' content="width=device-width">
+        <MDBNavbar expand='lg' light bgColor='light' className='fixed-top'>
           <MDBContainer fluid>
             <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
             <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>
@@ -43,14 +43,14 @@ export default function App() {
         <a href="https://www.linkedin.com/in/peter-p-2b757737">
           <img 
             src="https://s3.us-east-2.amazonaws.com/portfolio.site.images/LI-In-Bug.png" 
-            className="footerIcon" 
+            className={`${isMobile ? "footerIconMobile" : "footerIcon"}`}
             alt="Linkedin Logo"
           />
         </a>
         <a href="https://github.com/Ugh-GitHub">
           <img
             src="https://s3.us-east-2.amazonaws.com/portfolio.site.images/GitHub-Mark-64px.png" 
-            className="footerIcon" 
+            className={`${isMobile ? "footerIconMobile" : "footerIcon"}`}
             alt="GitHub Logo"
           />
         </a>
