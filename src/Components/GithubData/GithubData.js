@@ -56,7 +56,7 @@ export default function GithubData() {
           </h4>
         </a>
           <GithubColumn githubData={data} isMobile={isMobile} mobileWeekTotal={mobileWeekTotal}/>
-          <p className="">Hover for specfic commit information.&nbsp;
+          <p className="footnoteMobile">Tap for specfic commit information.&nbsp;
             <a href="https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-github-profile/managing-contribution-graphs-on-your-profile/why-are-my-contributions-not-showing-up-on-my-profile">
                <br/>Learn more about how contributions are counted for Github.
             </a>

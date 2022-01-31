@@ -10,7 +10,9 @@
 }
 
 #mobileGithubContributions {
+    margin-top: px;
     text-align: center;
+    margin-bottom: -10px;
 }
 
 
@@ -21,6 +23,12 @@
     margin-left: 40px;
     text-align: right;
     position: absolute;
+}
+
+.footnoteMobile {
+    margin-top: 10px;
+    /* font-size: small; */
+    
 }
 
 .githubIcon {

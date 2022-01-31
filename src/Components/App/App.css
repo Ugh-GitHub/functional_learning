@@ -1,35 +1,43 @@
 * {
     margin: 0 auto;
   }
-  html, body {
-    height: 100%;
-  }
-  .page-wrap {
-    min-height: 100%;
-    /* equal to footer height */
-    width: 100%;
-    margin-bottom: -75px; 
-  }
-  .page-wrap:after {
-    content: "";
-    display: block;
-  }
-  .site-footer, .page-wrap:after {
-    height: 75px; 
-  }
-  .site-footer {
-    max-width: 80%;
-    background: white;
-    text-align: center;
-    margin-top: 50px;
-    font-size: small;
-    margin-bottom: 500px;
-  }
 
-  .footerIcon {
-    
-    margin-top: 3px;
-    margin-right: 3px;
-    height: 35px;
-    margin-bottom: 50px;
+html, body {
+  height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  width: 100%;
+  margin-bottom: -65px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.siteFooter, .page-wrap:after {
+  height: 75px; 
+}
+.siteFooter {
+  max-width: 80%;
+  background: white;
+  text-align: center;
+  font-size: small;
+  margin-bottom: 500px;
+  margin-top: 50px;
+}
+
+.siteFooterMobile {
+  max-width: 80%;
+  background: white;
+  text-align: center;
+  font-size: small;
+  margin-bottom: 500px;
+  margin-top: 0px;
+}
+
+.footerIcon {
+  margin-top: 3px;
+  margin-right: 3px;
+  height: 35px;
+  margin-bottom: 50px;
 }
