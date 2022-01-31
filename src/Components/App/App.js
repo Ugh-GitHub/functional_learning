@@ -21,9 +21,9 @@ export default function App() {
       <div className="page-wrap">
         <MDBNavbar expand='lg' light bgColor='light' className='fixed-top'>
           <MDBContainer fluid>
-            <MDBNavbarBrand href='/'>Home</MDBNavbarBrand>
-            <MDBNavbarBrand href='/resume'>Resume</MDBNavbarBrand>
-            <MDBNavbarBrand href='/portfolio'>Portfolio</MDBNavbarBrand>
+            <MDBNavbarBrand href='/' className="navButton">Home</MDBNavbarBrand>
+            <MDBNavbarBrand href='/resume' className="navButton">Resume</MDBNavbarBrand>
+            <MDBNavbarBrand href='/portfolio' className="navButton">Portfolio</MDBNavbarBrand>
             {/* <MDBNavbarBrand href='/interviews'>Interview Recordings</MDBNavbarBrand> */}
             <MDBNavbarToggler
               aria-controls='navbarSupportedContent'

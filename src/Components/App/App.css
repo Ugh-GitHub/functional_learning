@@ -10,6 +10,19 @@
   }
 }
 
+.navButton {
+  margin: 0 auto;
+}
+
+/* .navContainerMobile {
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+}
+.navContainer {
+  background-color: blue;
+} */
+
 html, body {
   height: 100%;
 }
