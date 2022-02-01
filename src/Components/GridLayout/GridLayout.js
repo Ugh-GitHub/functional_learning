@@ -3,7 +3,9 @@ import './GridLayout';
 import GridItem from '../GridItem/GridItem';
 
 export default function GridLayout({ childToParent, setTechData }) {
-    let projects = [
+  var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;  
+  
+  let projects = [
         {
           name: "I Have a Project",
           technologies: [
@@ -111,7 +113,7 @@ export default function GridLayout({ childToParent, setTechData }) {
   
     return (
         
-        <div className="cards">
+        <div className={`${isMobile ? "cardsMobile" : "cards"}`}>
             {projects
             .filter((projects) => {
               let techs = setTechData;
