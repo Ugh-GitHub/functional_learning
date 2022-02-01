@@ -22,14 +22,16 @@ function Modal({ setOpenModal, setProjectData }) {
             <p>{setProjectData.cardText}</p>
           </div>
           <div className="footer">
-            <button id="cancelBtn" onClick={() => {setOpenModal(false);}}>
-              Cancel
-            </button>
             <button onClick={() => {window.location.href=setProjectData.demoLink}}>
               Demo Site
             </button>
             <button onClick={() => {window.location.href=setProjectData.github}}>
               Github Repo
+            </button>
+          </div>
+          <div className="footer">
+            <button id="cancelBtn" onClick={() => {setOpenModal(false);}}>
+              Cancel
             </button>
           </div>
         </div>

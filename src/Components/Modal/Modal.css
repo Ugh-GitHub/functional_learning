@@ -60,7 +60,7 @@
 .modalContainer .footer button {
   width: 150px;
   height: 45px;
-  margin: 10px;
+  /* margin: 10px; */
   border: none;
   background-color: cornflowerblue;
   color: white;
@@ -73,52 +73,52 @@
 
 .modalContainerMobile {
   width: 85%;
-  height: 70%px;
+  height: 70%;
   border-radius: 4px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   display: flex;
   flex-direction: column;
-  padding: 25px;
 }
 
 .modalContainerMobile .title {
   display: inline-block;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .modalContainerMobile .body {
-  flex: 50%;
+  /* flex: 50%; */
   display: flex;
   justify-content: center;
-  align-items: center;
-  font-size: 1.7rem;
+  /* align-items: center; */
+  font-size: 1.2rem;
   text-align: center;
+  width: 82%;
 }
 
 .modalContainerMobile .footer {
-  flex: 20%;
+  /* flex: 20%; */
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .modalContainerMobile .footer button {
-  width: 75px;
+  width: 125px;
   height: 45px;
-  margin: 10px;
   border: none;
   background-color: cornflowerblue;
   color: white;
   border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
+  margin: 10px;
 }
 
 .modalImgMobile {
-  width: 75%;
-  height:fit-content;
+  /* width: 75%; */
+  /* height:fit-content; */
   display: none;
 }
 

@@ -3,6 +3,9 @@ import React, { useState } from 'react';
 import './ButtonGrid.css';
 
 export default function ButtonGrid({buttonToggle}) {
+
+    var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
+
     const [technologies, setTechnologies] = useState(
         [
             {
@@ -84,7 +87,7 @@ export default function ButtonGrid({buttonToggle}) {
     );
 
     function selectToggle(technology) {
-        var index = technologies.map(function(e) { return e.name; }).indexOf(technology.name);
+        var index = technologies.map(function(tech) { return tech.name; }).indexOf(technology.name);
         if (technologies[index].toggle === '') {
             technologies[index].toggle = 'toggled';
         }
@@ -100,19 +103,17 @@ export default function ButtonGrid({buttonToggle}) {
 
     return (
 
-        <div className="buttonGrid">
+        <div className={`${isMobile ? "buttonGridMobile" : "buttonGrid"}`}>
             {technologies
             .map((technology, index) => (
                 <div> 
-                    {(index % 8 === 7) ?
-                        <div className="buttonNewLine">
-                            <button key={index} className={technology.toggle} onClick={() => someFunction(technology)}>{technology.name}</button>
-                        </div>
-                        
-                    :
-                        <button key={index} className={technology.toggle} onClick={() => someFunction(technology)}>{technology.name}</button>
-                    }
-                    
+                    <button 
+                        key={index} 
+                        className={`${technology.toggle} ${isMobile ? "buttonMobile" : ""}`} 
+                        onClick={() => someFunction(technology)}
+                    >
+                        {technology.name}
+                    </button>
                 </div>
             ))}
         </div>
