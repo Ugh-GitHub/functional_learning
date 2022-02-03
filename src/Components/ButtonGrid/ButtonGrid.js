@@ -106,15 +106,14 @@ export default function ButtonGrid({buttonToggle}) {
         <div className={`${isMobile ? "buttonGridMobile" : "buttonGrid"}`}>
             {technologies
             .map((technology, index) => (
-                <div> 
-                    <button 
-                        key={index} 
-                        className={`${technology.toggle} ${isMobile ? "buttonMobile" : ""}`} 
-                        onClick={() => someFunction(technology)}
-                    >
-                        {technology.name}
-                    </button>
-                </div>
+                <button 
+                    key={index} 
+                    className={`${isMobile ? "buttonMobile" : ""}`} 
+                    id={technology.toggle}
+                    onClick={() => someFunction(technology)}
+                >
+                    {technology.name}
+                </button>
             ))}
         </div>
 

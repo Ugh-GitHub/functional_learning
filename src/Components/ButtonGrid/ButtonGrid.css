@@ -29,7 +29,7 @@
     margin: 0 auto;
     /* row-gap: .5rem;
     column-gap: -0.0rem; */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     max-width: 95%;
 }
 
@@ -37,7 +37,7 @@
     user-select: none;
 }
 
-.toggled {
+#toggled {
     background-color: cornflowerblue;
     color: white;
 }
@@ -54,12 +54,14 @@ button {
   }
 
 .buttonMobile {
+    display: flex;
+    justify-content: center;
     padding-left: 10px;
     padding-right: 10px;
-    margin-top: 7px;
-    margin: 4px;
+    margin: 5px 5px 5px;
     border: none;
     color: black;
+    background-color: #e4e4e4;
     border-radius: 8px;
     font-size: 20px;
     cursor: pointer;
