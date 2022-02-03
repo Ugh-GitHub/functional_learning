@@ -36,6 +36,9 @@ export default function GithubData() {
   if ( error ) return <p>Error :(</p>;
   let mobileWeekTotal = 12;
   
+  // Probably need a Date.getDay() to determine if it's Saturday/Sunday/Monday.
+  // Make sure to test to see if this functionality needs to be added
+
   var mobileTotalContributionsArray = data.user.contributionsCollection.contributionCalendar.weeks.slice(52 - mobileWeekTotal,53);
   let mobileContributionTotal = 0;
   
