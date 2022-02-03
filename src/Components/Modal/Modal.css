@@ -75,8 +75,8 @@
 
   .modalContainerMobile {
     margin-top: 8%;
-    width: 50%;
-    height: 65%;
+    width: 80%;
+    height: 60%;
     border-radius: 4px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -132,8 +132,8 @@
 
 @media (orientation: portrait) {
   .modalContainerMobile {
-    width: 85%;
-    height: 33%;
+    width: 90%;
+    height: 50%;
     border-radius: 4px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -158,10 +158,12 @@
   }
 
   .modalContainerMobile .footer {
-    /* flex: 20%; */
     display: flex;
+    align-items: center;
     justify-content: center;
-    /* align-items: center; */
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 93%;
   }
 
   .modalContainerMobile .footer button {
@@ -173,7 +175,7 @@
     border-radius: 8px;
     font-size: 20px;
     cursor: pointer;
-    margin: 10px;
+    margin: 5px auto;
     padding: 0 5px 0px 5px;
   }
 
@@ -186,6 +188,10 @@
 
 
 /*  */
+
+#disabledButton {
+  background-color: gray;
+}
 
 #cancelBtn {
   background-color: crimson;
