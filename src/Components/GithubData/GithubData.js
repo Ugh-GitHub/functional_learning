@@ -36,7 +36,7 @@ export default function GithubData() {
   if ( error ) return <p>Error :(</p>;
   let mobileWeekTotal = 12;
   
-  var mobileTotalContributionsArray = data.user.contributionsCollection.contributionCalendar.weeks.slice(52 - mobileWeekTotal,52);
+  var mobileTotalContributionsArray = data.user.contributionsCollection.contributionCalendar.weeks.slice(52 - mobileWeekTotal,53);
   let mobileContributionTotal = 0;
   
 

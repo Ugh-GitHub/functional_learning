@@ -4,21 +4,37 @@ import Tooltip from '../ToolTip/ToolTip';
 import TooltipRight from '../ToolTip/ToolTipRight';
 
 export default function GithubRow({week, weekIndex}) {
-    if(weekIndex < 25) {
+    var isMobile = Math.min(window.screen.width, window.screen.height) < 768 || navigator.userAgent.indexOf("Mobi") > -1;
+    let githubHalfwayPoint = 26;
+    if (isMobile) {
+        githubHalfwayPoint = 6;
+    }
+    if(weekIndex < githubHalfwayPoint) {
         return week.map((day) => (
-            // insert conditional rendering for Tooltip based on what the weekIndex is (i.e. if weekIndex is <25, skews to the left)
-            <Tooltip text={`${day.contributionCount} contributions on ${day.date}`} key={day.date}>
-                <div key={day.date} className={`contributionBox ${day.color}`} style={{backgroundColor: `${day.color}`}}>
-                </div>
+            <Tooltip 
+                text={`${day.contributionCount} contributions on ${day.date}`} 
+                key={day.date}
+            >
+                <div 
+                    key={day.date} 
+                    className={`contributionBox ${day.color}`} 
+                    style={{backgroundColor: `${day.color}`}}
+                />
             </Tooltip>
-            
         ));
     }
-    return week.map((day) => (
-        // insert conditional rendering for Tooltip based on what the weekIndex is (i.e. if weekIndex is <25, skews to the left)
-        <TooltipRight text={`${day.contributionCount} contributions on ${day.date}`} key={day.date}>
-            <div key={day.date} className={`contributionBox ${day.color}`} style={{backgroundColor: `${day.color}`}}>
-            </div>
-        </TooltipRight>
-    ));
+    else {
+        return week.map((day) => (
+            <TooltipRight 
+                text={`${day.contributionCount} contributions on ${day.date}`} 
+                key={day.date}
+            >
+                <div 
+                    key={day.date} 
+                    className={`contributionBox ${day.color}`} 
+                    style={{backgroundColor: `${day.color}`}}
+                />
+            </TooltipRight>
+        ));
+    }        
 }
