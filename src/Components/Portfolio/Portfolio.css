@@ -4,6 +4,7 @@
 .buttonGridInstructions {
     text-align: center;
     margin-top: 80px;
+    max-width: 90%;
 }
 
 .d-flex {
@@ -47,8 +48,18 @@ img {
 
 .card {
     width: 308px;
-    height: 420px;
+    height: 380px;
     margin: 0 auto;
+}
+
+.portfolioCardBodyText {
+    font-size: large;
+    text-align: center;
+}
+
+.portfolioCardBodyTitle {
+    font-size: x-large;
+    text-align: center;
 }
 
 /* Screen larger than 600px? 2 column */

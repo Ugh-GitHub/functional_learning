@@ -5,9 +5,9 @@ export default function GridItem({ project }) {
 
         <>
             <img src={project.imageLink} className="PortfolioCardImage" alt={project.altTag}></img>
-            <h4><b>{project.name}</b></h4>
-            <p>{project.due}</p>
-            <p>{project.cardText}</p>
+            <h4 className='portfolioCardBodyTitle'><b>{project.name}</b></h4>
+            {/* <p>{project.due}</p> */}
+            <p className='portfolioCardBodyText'>{project.cardText}</p>
         </>
     );
 }

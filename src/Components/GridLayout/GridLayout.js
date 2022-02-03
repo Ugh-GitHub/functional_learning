@@ -130,16 +130,18 @@ export default function GridLayout({ childToParent, setTechData }) {
                 }
               }
             })
-            .map((project, index) => (
-                    <div className="card" key={index}>
-                        <div className="container" onClick={() => {
-                            childToParent(project);
-                        }}>
-                            <GridItem project={project}/>
-                        </div>
-                    </div>
-            ))}
+            .map((project, index) => 
+              (
+                <div className="card" key={index}>
+                  <div 
+                    className="container" 
+                    onClick={() => {childToParent(project);}}
+                  >
+                    <GridItem project={project}/>
+                  </div>
+                </div>
+              )
+            )}
         </div>
-
     );
 }
