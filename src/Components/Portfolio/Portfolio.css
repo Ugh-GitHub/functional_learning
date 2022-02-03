@@ -4,6 +4,11 @@
 .buttonGridInstructions {
     text-align: center;
     margin-top: 80px;
+}
+
+.buttonGridInstructionsMobile {
+    text-align: center;
+    margin-top: 80px;
     max-width: 90%;
 }
 

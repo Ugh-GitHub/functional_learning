@@ -28,7 +28,7 @@ export default function Invoices() {
     return (
       <div>
           {modalOpen && <Modal setOpenModal={setModalOpen} setProjectData={project}/>}
-          <p className='buttonGridInstructions'>A small selection of my previous work. You can filter these projects by technology with the buttons below.
+          <p className='buttonGridInstructionsMobile'>A small selection of my previous work. You can filter these projects by technology with the buttons below.
           <br/>Deployed demo links have been disabled by default on mobile. Demo sites are still accessible on desktop</p>       
           <ButtonGrid buttonToggle={buttonToggle}/>
           <GridLayout childToParent={childToParent} setTechData={tech}/>
