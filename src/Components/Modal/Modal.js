@@ -32,10 +32,13 @@ function Modal({ setOpenModal, setProjectData }) {
                 </button>
               :
                 <button onClick={() => {window.location.href=setProjectData.demoLink}} >
-                  Demo Site
+                  {setProjectData.linkType === 'heroku' ?
+                    "Demo Site"
+                  :
+                    "Presentation"
+                  }
                 </button>
             }
-            
             <button onClick={() => {window.location.href=setProjectData.github}}>
               Github Repo
             </button>
