@@ -32,6 +32,11 @@ export default function ButtonGrid({buttonToggle}) {
                 name: 'React', 
                 type: 'library',
                 toggle: ''
+            },
+            {
+                name: 'React-Native', 
+                type: 'library',
+                toggle: ''
             }, 
             {
                 name: 'Redux', 
@@ -68,6 +73,11 @@ export default function ButtonGrid({buttonToggle}) {
                 type: 'API',
                 toggle: ''
             },
+            {
+                name: 'Expo', 
+                type: 'library',
+                toggle: ''
+            }, 
             {
                 name: 'Material-UI',
                 type: 'library',

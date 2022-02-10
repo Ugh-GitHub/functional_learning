@@ -14,7 +14,7 @@ function Modal({ setOpenModal, setProjectData }) {
     <div>
       <div className="modalBackground">
         <div className={`${isMobile ? "modalContainerMobile" : "modalContainer"}`}>
-          <img src={setProjectData.modalImageLink} className={`${isMobile ? "modalImgMobile" : ""}`} alt={setProjectData.altTag}></img>
+          <img src={setProjectData.modalImageLink} className={`${isMobile ? "modalImgMobile" : "modalImg"}`} alt={setProjectData.altTag}></img>
           <div className="title">
             <h1>{setProjectData.name}</h1>
           </div>

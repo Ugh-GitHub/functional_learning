@@ -1,5 +1,5 @@
 .modalBackground {
-  margin-top: -80px;
+  margin-top: -50px;
   width: 100vw;
   height: 100vh;
   background-color: rgba(200, 200, 200, .7);
@@ -67,6 +67,10 @@
   border-radius: 8px;
   font-size: 20px;
   cursor: pointer;
+}
+
+.modalImg {
+  object-fit: cover;
 }
 
 /* START HERE FOR MOBILE LANDSCAPE */
