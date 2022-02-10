@@ -22,12 +22,20 @@ function Modal({ setOpenModal, setProjectData }) {
             <p>{setProjectData.cardText}</p>
           </div>
           <div className="footer">
-            <button onClick={() => {window.location.href=setProjectData.demoLink}} 
-              disabled={isMobile} 
-              id={`${isMobile ? "disabledButton" : ""}`}
-            >
-              Demo Site
-            </button>
+            {
+              isMobile && setProjectData.linkType === 'heroku' ?
+                <button onClick={() => {window.location.href=setProjectData.demoLink}} 
+                  disabled={true}
+                  id={`${isMobile && setProjectData.linkType === 'heroku' ? "disabledButton" : ""}`}
+                >
+                  Demo Site
+                </button>
+              :
+                <button onClick={() => {window.location.href=setProjectData.demoLink}} >
+                  Demo Site
+                </button>
+            }
+            
             <button onClick={() => {window.location.href=setProjectData.github}}>
               Github Repo
             </button>
