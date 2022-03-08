@@ -25,6 +25,7 @@ export default function App() {
             <MDBNavbarBrand href='/resume' className="navButton">Resume</MDBNavbarBrand>
             <MDBNavbarBrand href='/portfolio' className="navButton">Portfolio</MDBNavbarBrand>
             {/* <MDBNavbarBrand href='/interviews'>Interview Recordings</MDBNavbarBrand> */}
+            {/* Need to fix CSS if going to include VideoInterview */}
             <MDBNavbarToggler
               aria-controls='navbarSupportedContent'
               aria-expanded='false'

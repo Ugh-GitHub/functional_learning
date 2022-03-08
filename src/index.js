@@ -16,6 +16,7 @@ import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
+import VideoInterview from './Components/VideoInterview/VideoInterview';
 
 
 const httpLink = createHttpLink({
@@ -70,7 +71,8 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<Home />}/>
-            {/* <Route path="interviews" element={<Test />}/> */}
+            {/* <Route path="interviews" element={<VideoInterview />}/> */}
+            {/* Need to fix CSS if going to include VideoInterview */}
             <Route path="resume" element={<Resume />} />
             <Route path="portfolio" element={<Portfolio />} />
             <Route
