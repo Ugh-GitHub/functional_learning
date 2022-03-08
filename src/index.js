@@ -6,7 +6,7 @@ import {
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-  gql
+  // gql
 } from "@apollo/client";
 import { setContext } from '@apollo/client/link/context';
 import './index.css';
@@ -16,7 +16,7 @@ import { BrowserRouter as Router, Routes, Route  } from 'react-router-dom';
 import Portfolio from './Components/Portfolio/Portfolio';
 import Resume from './Components/Resume/Resume';
 import Home from './Components/Home/Home';
-import VideoInterview from './Components/VideoInterview/VideoInterview';
+// import VideoInterview from './Components/VideoInterview/VideoInterview';
 
 
 const httpLink = createHttpLink({
