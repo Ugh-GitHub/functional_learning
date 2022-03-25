@@ -6,9 +6,9 @@ import { Accordion } from 'react-bootstrap';
 export default function VidInterviewItem() {
     let AccordionItems = [
         {question: "Why should we hire you?", link:'E7wJTI-1dvQ', alt:"'Why should we hire you?'"},
-        {question: "What are some other skills we should know about?", link:'LYG7sMtb6u8', alt:""},
-        {question: "Tell me about a time you failed. How did you deal with the situation?", link:'Nkx1hWs88Ek', alt:""},
-        {question: "Test", link:'gu6cequxkLQ', alt:""}];
+        {question: "What are some other skills we should know about?", link:'LYG7sMtb6u8', alt:"'What are some other skills we should know about?'"},
+        {question: "Tell me about a time you failed. How did you deal with the situation?", link:'Nkx1hWs88Ek', alt:"'Tell me about a time you failed. How did you deal with the situation?'"},
+    ];
 
     return (
         <>
@@ -25,19 +25,12 @@ export default function VidInterviewItem() {
                                         <iframe
                                             async
                                             loading='lazy'
-                                            srcdoc={`<style>*
+                                            srcdoc={`
+                                                <style>*
                                                     {padding:0;margin:0;overflow:hidden}html,
                                                     body{height:100%}img,
-                                                    span{position:absolute;
-                                                        width:100%;
-                                                        top:0;
-                                                        bottom:0;
-                                                        margin:auto}
-                                                    span{height:1.5em;
-                                                            text-align:center;
-                                                            font:48px/1.5 sans-serif;
-                                                            color:white;
-                                                            text-shadow:0 0 0.5em black}
+                                                    span{position:absolute;width:100%;top:0;bottom:0;margin:auto}
+                                                    span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}
                                                 </style>
                                                 <a href=https://www.youtube.com/embed/${interview.link}>
                                                     <img src=https://img.youtube.com/vi/${interview.link}/hqdefault.jpg alt="${interview.alt} video essay placeholder image"><span>▶</span>
