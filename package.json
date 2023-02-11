@@ -21,7 +21,7 @@
     "mdb-react-ui-kit": "^1.6.0",
     "mdb-ui-kit": "^3.10.0",
     "node-forge": "^1.0.0",
-    "nodemon": "^2.0.15",
+    "nodemon": "^2.0.20",
     "npm-force-resolutions": "^0.0.10",
     "pg": "^8.7.1",
     "postcss": "^8.2.13",
